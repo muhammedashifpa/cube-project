@@ -74,6 +74,27 @@
 }
 
 /* ============================================
+   STATISTICS SECTION LAYOUT
+   ============================================ */
+
+.statistics-section {
+  background: linear-gradient(180deg, #032e15 0%, #016630 100%);
+  padding: var(--spacing-3xl) var(--spacing-md);
+  margin: var(--spacing-3xl) 0;
+}
+
+.statistics-section__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.statistics-section__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-2xl);
+}
+
+/* ============================================
    TABLE SECTION LAYOUT
    ============================================ */
 
@@ -151,6 +172,11 @@
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   /* 768px+ layout adjustments */
+  .statistics-section__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-3xl);
+  }
+
   .footer__row--content {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -163,6 +189,11 @@
 /* Large devices (desktops, 1024px and up) */
 @media (min-width: 1024px) {
   /* 1024px+ layout adjustments */
+  .statistics-section__grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-2xl);
+  }
+
   .footer__row--content {
     grid-template-columns: 1fr 1fr 1fr 3fr;
     gap: var(--spacing-3xl);

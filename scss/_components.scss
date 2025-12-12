@@ -193,6 +193,57 @@
 }
 
 /* ============================================
+   STATISTICS SECTION COMPONENT
+   ============================================ */
+
+.statistics-section__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--spacing-md);
+}
+
+.statistics-section__number {
+  display: flex;
+  align-items: baseline;
+  gap: 0;
+}
+
+.statistics-section__value {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: 2.5rem; // 40px
+  line-height: 1; // 100%
+  letter-spacing: 0;
+  color: var(--color-footer-text);
+  display: inline-block;
+  text-align: center;
+}
+
+.statistics-section__percent {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: 2.5rem; // 40px
+  line-height: 1; // 100%
+  letter-spacing: 0;
+  color: var(--color-footer-text);
+  display: inline-block;
+}
+
+.statistics-section__text {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-light);
+  font-size: 1rem; // 16px
+  line-height: 1; // 100%
+  letter-spacing: 0;
+  color: var(--color-footer-text);
+  margin: 0;
+  max-width: 100%;
+  text-align: center;
+}
+
+/* ============================================
    TABLE COMPONENT
    ============================================ */
 
