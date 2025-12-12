@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Compiled CSS (optional - uncomment if you want to compile on deploy)
+# css/*.css
+# css/*.css.map
+
+# Source maps (optional)
+*.map
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+

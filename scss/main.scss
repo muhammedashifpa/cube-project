@@ -1,0 +1,9 @@
+/**
+ * MAIN.SCSS
+ * Main entry point - imports all SCSS partials
+ */
+
+@use 'base';
+@use 'layout';
+@use 'components';
+

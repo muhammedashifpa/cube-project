@@ -1,0 +1,615 @@
+/**
+ * MAIN.SCSS
+ * Main entry point - imports all SCSS partials
+ */
+/* ============================================
+   BASE.SCSS
+   - CSS Reset
+   - Typography
+   - CSS Variables (placeholders - values to be assigned later)
+   ============================================ */
+/* ============================================
+   CSS RESET
+   ============================================ */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Remove default button and input styles */
+button,
+input[type=button],
+input[type=submit],
+input[type=reset] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Remove default input number arrows */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* ============================================
+   CSS VARIABLES
+   (Placeholders - values to be assigned later)
+   ============================================ */
+:root {
+  /* Colors */
+  --color-primary: /* to be assigned */;
+  --color-secondary: /* to be assigned */;
+  --color-accent: /* to be assigned */;
+  --color-text: /* to be assigned */;
+  --color-text-light: /* to be assigned */;
+  --color-bg: /* to be assigned */;
+  --color-bg-light: /* to be assigned */;
+  --color-bg-dark: /* to be assigned */;
+  --color-border: /* to be assigned */;
+  --color-error: /* to be assigned */;
+  --color-success: /* to be assigned */;
+  /* Typography */
+  --font-family-primary: /* to be assigned */;
+  --font-family-secondary: /* to be assigned */;
+  --font-size-xs: /* to be assigned */;
+  --font-size-sm: /* to be assigned */;
+  --font-size-base: /* to be assigned */;
+  --font-size-md: /* to be assigned */;
+  --font-size-lg: /* to be assigned */;
+  --font-size-xl: /* to be assigned */;
+  --font-size-2xl: /* to be assigned */;
+  --font-size-3xl: /* to be assigned */;
+  --font-weight-normal: /* to be assigned */;
+  --font-weight-medium: /* to be assigned */;
+  --font-weight-semibold: /* to be assigned */;
+  --font-weight-bold: /* to be assigned */;
+  --line-height-tight: /* to be assigned */;
+  --line-height-normal: /* to be assigned */;
+  --line-height-relaxed: /* to be assigned */;
+  /* Spacing */
+  --spacing-xs: /* to be assigned */;
+  --spacing-sm: /* to be assigned */;
+  --spacing-md: /* to be assigned */;
+  --spacing-lg: /* to be assigned */;
+  --spacing-xl: /* to be assigned */;
+  --spacing-2xl: /* to be assigned */;
+  --spacing-3xl: /* to be assigned */;
+  /* Border Radius */
+  --radius-sm: /* to be assigned */;
+  --radius-md: /* to be assigned */;
+  --radius-lg: /* to be assigned */;
+  --radius-full: /* to be assigned */;
+  /* Shadows */
+  --shadow-sm: /* to be assigned */;
+  --shadow-md: /* to be assigned */;
+  --shadow-lg: /* to be assigned */;
+  /* Transitions */
+  --transition-fast: /* to be assigned */;
+  --transition-normal: /* to be assigned */;
+  --transition-slow: /* to be assigned */;
+  /* Z-index layers */
+  --z-index-base: 1;
+  --z-index-dropdown: 10;
+  --z-index-sticky: 20;
+  --z-index-fixed: 30;
+  --z-index-modal: 40;
+  --z-index-tooltip: 50;
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+body {
+  font-family: var(--font-family-primary, system-ui, -apple-system, sans-serif);
+  font-size: var(--font-size-base, 16px);
+  font-weight: var(--font-weight-normal, 400);
+  line-height: var(--line-height-normal, 1.5);
+  color: var(--color-text, #000);
+  background-color: var(--color-bg, #fff);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-weight-bold, 700);
+  line-height: var(--line-height-tight, 1.2);
+}
+
+h1 {
+  font-size: var(--font-size-3xl, 2rem);
+}
+
+h2 {
+  font-size: var(--font-size-2xl, 1.75rem);
+}
+
+h3 {
+  font-size: var(--font-size-xl, 1.5rem);
+}
+
+h4 {
+  font-size: var(--font-size-lg, 1.25rem);
+}
+
+h5 {
+  font-size: var(--font-size-md, 1.125rem);
+}
+
+h6 {
+  font-size: var(--font-size-base, 1rem);
+}
+
+p {
+  margin-bottom: var(--spacing-md, 1rem);
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--color-primary, #0066cc);
+  outline-offset: 2px;
+}
+
+/* Skip link for screen readers */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-bg-dark, #000);
+  color: var(--color-bg, #fff);
+  padding: var(--spacing-sm, 0.5rem) var(--spacing-md, 1rem);
+  z-index: var(--z-index-tooltip, 50);
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ============================================
+   LAYOUT.SCSS
+   - Section-level layout styles
+   - Container and grid systems
+   - Responsive layout blocks
+   ============================================ */
+/* ============================================
+   HEADER LAYOUT
+   ============================================ */
+.header {
+  /* Header layout styles */
+}
+
+.header__container {
+  /* Header container styles */
+}
+
+/* ============================================
+   MAIN CONTENT LAYOUT
+   ============================================ */
+.main {
+  /* Main content layout */
+}
+
+/* ============================================
+   PRODUCT SECTION LAYOUT
+   ============================================ */
+.product {
+  /* Product section layout */
+}
+
+.product__container {
+  /* Product container layout */
+}
+
+.product__image-section {
+  /* Product image section layout */
+}
+
+.product__info-section {
+  /* Product info section layout */
+}
+
+/* ============================================
+   ACCORDION SECTION LAYOUT
+   ============================================ */
+.accordion-section {
+  /* Accordion section layout */
+}
+
+.accordion-section__container {
+  /* Accordion section container */
+}
+
+/* ============================================
+   COUNTER SECTION LAYOUT
+   ============================================ */
+.counter-section {
+  /* Counter section layout */
+}
+
+.counter-section__container {
+  /* Counter section container */
+}
+
+.counter-section__grid {
+  /* Counter grid layout */
+}
+
+/* ============================================
+   TABLE SECTION LAYOUT
+   ============================================ */
+.table-section {
+  /* Table section layout */
+}
+
+.table-section__container {
+  /* Table section container */
+}
+
+/* ============================================
+   FOOTER LAYOUT
+   ============================================ */
+.footer {
+  /* Footer layout */
+}
+
+.footer__container {
+  /* Footer container */
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
+/* Mobile First - Base styles above are for mobile */
+/* Small devices (landscape phones, 480px and up) */
+@media (min-width: 480px) {
+  /* 480px+ layout adjustments */
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  /* 768px+ layout adjustments */
+}
+/* Large devices (desktops, 1024px and up) */
+@media (min-width: 1024px) {
+  /* 1024px+ layout adjustments */
+}
+/* ============================================
+   COMPONENTS.SCSS
+   - Reusable component styles
+   - Buttons, cards, slider, accordion, etc.
+   ============================================ */
+/* ============================================
+   BUTTON COMPONENT
+   ============================================ */
+.btn {
+  /* Base button styles */
+}
+
+.btn--primary {
+  /* Primary button variant */
+}
+
+.btn--secondary {
+  /* Secondary button variant */
+}
+
+.btn--cart {
+  /* Cart button specific styles */
+}
+
+/* ============================================
+   SLIDER COMPONENT
+   ============================================ */
+.slider {
+  /* Slider container */
+}
+
+.slider__main {
+  /* Main slider area */
+}
+
+.slider__viewport {
+  /* Slider viewport */
+}
+
+.slider__track {
+  /* Slider track */
+}
+
+.slider__slide {
+  /* Individual slide */
+}
+
+.slider__image {
+  /* Slide image */
+}
+
+.slider__arrow {
+  /* Slider navigation arrow */
+}
+
+.slider__arrow--prev {
+  /* Previous arrow */
+}
+
+.slider__arrow--next {
+  /* Next arrow */
+}
+
+.slider__arrow-icon {
+  /* Arrow icon */
+}
+
+.slider__dots {
+  /* Dots container */
+}
+
+.slider__dot {
+  /* Individual dot */
+}
+
+.slider__dot--active {
+  /* Active dot state */
+}
+
+.slider__thumbnails {
+  /* Thumbnails container */
+}
+
+.slider__thumbnail {
+  /* Individual thumbnail */
+}
+
+.slider__thumbnail--active {
+  /* Active thumbnail state */
+}
+
+.slider__thumbnail-image {
+  /* Thumbnail image */
+}
+
+/* ============================================
+   SUBSCRIPTION COMPONENT
+   ============================================ */
+.subscription {
+  /* Subscription container */
+}
+
+.subscription__title {
+  /* Subscription title */
+}
+
+.subscription__options {
+  /* Subscription options container */
+}
+
+.subscription__option {
+  /* Individual subscription option */
+}
+
+.subscription__radio {
+  /* Radio input */
+}
+
+.subscription__label {
+  /* Radio label */
+}
+
+.subscription__expand {
+  /* Expand button */
+}
+
+.subscription__expand-text {
+  /* Expand button text */
+}
+
+.subscription__expand-icon {
+  /* Expand icon */
+}
+
+/* ============================================
+   ACCORDION COMPONENT
+   ============================================ */
+.accordion {
+  /* Accordion container */
+}
+
+.accordion__item {
+  /* Individual accordion item */
+}
+
+.accordion__header {
+  /* Accordion header/button */
+}
+
+.accordion__title {
+  /* Accordion item title */
+}
+
+.accordion__icon {
+  /* Accordion expand/collapse icon */
+}
+
+.accordion__content {
+  /* Accordion content area */
+}
+
+.accordion__text {
+  /* Accordion text content */
+}
+
+.accordion__item--active .accordion__content {
+  /* Active accordion item content */
+}
+
+/* ============================================
+   COUNTER COMPONENT
+   ============================================ */
+.counter {
+  /* Counter container */
+}
+
+.counter__value {
+  /* Counter numeric value */
+}
+
+.counter__label {
+  /* Counter label (%, +, etc.) */
+}
+
+.counter__description {
+  /* Counter description text */
+}
+
+/* ============================================
+   TABLE COMPONENT
+   ============================================ */
+.table {
+  /* Table element */
+}
+
+.table__head {
+  /* Table header */
+}
+
+.table__body {
+  /* Table body */
+}
+
+.table__row {
+  /* Table row */
+}
+
+.table__header {
+  /* Table header cell */
+}
+
+.table__cell {
+  /* Table data cell */
+}
+
+/* ============================================
+   HEADER NAVIGATION COMPONENT
+   ============================================ */
+.header__menu-toggle {
+  /* Hamburger menu toggle button */
+}
+
+.header__menu-icon {
+  /* Hamburger menu icon */
+}
+
+.header__nav {
+  /* Navigation container */
+}
+
+.header__nav-list {
+  /* Navigation list */
+}
+
+.header__nav-item {
+  /* Navigation list item */
+}
+
+.header__nav-link {
+  /* Navigation link */
+}
+
+.header__nav--open {
+  /* Open navigation state */
+}
+
+/* ============================================
+   RESPONSIVE COMPONENT ADJUSTMENTS
+   ============================================ */
+/* Small devices (landscape phones, 480px and up) */
+@media (min-width: 480px) {
+  /* Component adjustments for 480px+ */
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  /* Component adjustments for 768px+ */
+}
+/* Large devices (desktops, 1024px and up) */
+@media (min-width: 1024px) {
+  /* Component adjustments for 1024px+ */
+}
+
+/*# sourceMappingURL=main.css.map */

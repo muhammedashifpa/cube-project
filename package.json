@@ -1,0 +1,24 @@
+{
+  "name": "cube-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass:watch": "sass --watch scss/main.scss:css/main.css",
+    "sass:build": "sass scss/main.scss:css/main.css",
+    "autoprefixer": "postcss css/main.css -o css/main.css",
+    "build": "npm run sass:build && npm run autoprefixer",
+    "dev": "npm run sass:watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "packageManager": "npm@11.5.1+sha512.232e6f5d9e799bcb486920b3e9ba907fdf96e576cf7e8c9446c8162e33a416096a1d37a9e910d9a918f6b1f606791c99bc6bb61ee2569b496ec74af13d0dbd95",
+  "devDependencies": {
+    "autoprefixer": "^10.4.22",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "sass": "^1.96.0"
+  }
+}

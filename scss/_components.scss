@@ -1,0 +1,273 @@
+/* ============================================
+   COMPONENTS.SCSS
+   - Reusable component styles
+   - Buttons, cards, slider, accordion, etc.
+   ============================================ */
+
+/* ============================================
+   BUTTON COMPONENT
+   ============================================ */
+
+.btn {
+    /* Base button styles */
+}
+
+.btn--primary {
+    /* Primary button variant */
+}
+
+.btn--secondary {
+    /* Secondary button variant */
+}
+
+.btn--cart {
+    /* Cart button specific styles */
+}
+
+/* ============================================
+   SLIDER COMPONENT
+   ============================================ */
+
+.slider {
+    /* Slider container */
+}
+
+.slider__main {
+    /* Main slider area */
+}
+
+.slider__viewport {
+    /* Slider viewport */
+}
+
+.slider__track {
+    /* Slider track */
+}
+
+.slider__slide {
+    /* Individual slide */
+}
+
+.slider__image {
+    /* Slide image */
+}
+
+.slider__arrow {
+    /* Slider navigation arrow */
+}
+
+.slider__arrow--prev {
+    /* Previous arrow */
+}
+
+.slider__arrow--next {
+    /* Next arrow */
+}
+
+.slider__arrow-icon {
+    /* Arrow icon */
+}
+
+.slider__dots {
+    /* Dots container */
+}
+
+.slider__dot {
+    /* Individual dot */
+}
+
+.slider__dot--active {
+    /* Active dot state */
+}
+
+.slider__thumbnails {
+    /* Thumbnails container */
+}
+
+.slider__thumbnail {
+    /* Individual thumbnail */
+}
+
+.slider__thumbnail--active {
+    /* Active thumbnail state */
+}
+
+.slider__thumbnail-image {
+    /* Thumbnail image */
+}
+
+/* ============================================
+   SUBSCRIPTION COMPONENT
+   ============================================ */
+
+.subscription {
+    /* Subscription container */
+}
+
+.subscription__title {
+    /* Subscription title */
+}
+
+.subscription__options {
+    /* Subscription options container */
+}
+
+.subscription__option {
+    /* Individual subscription option */
+}
+
+.subscription__radio {
+    /* Radio input */
+}
+
+.subscription__label {
+    /* Radio label */
+}
+
+.subscription__expand {
+    /* Expand button */
+}
+
+.subscription__expand-text {
+    /* Expand button text */
+}
+
+.subscription__expand-icon {
+    /* Expand icon */
+}
+
+/* ============================================
+   ACCORDION COMPONENT
+   ============================================ */
+
+.accordion {
+    /* Accordion container */
+}
+
+.accordion__item {
+    /* Individual accordion item */
+}
+
+.accordion__header {
+    /* Accordion header/button */
+}
+
+.accordion__title {
+    /* Accordion item title */
+}
+
+.accordion__icon {
+    /* Accordion expand/collapse icon */
+}
+
+.accordion__content {
+    /* Accordion content area */
+}
+
+.accordion__text {
+    /* Accordion text content */
+}
+
+.accordion__item--active .accordion__content {
+    /* Active accordion item content */
+}
+
+/* ============================================
+   COUNTER COMPONENT
+   ============================================ */
+
+.counter {
+    /* Counter container */
+}
+
+.counter__value {
+    /* Counter numeric value */
+}
+
+.counter__label {
+    /* Counter label (%, +, etc.) */
+}
+
+.counter__description {
+    /* Counter description text */
+}
+
+/* ============================================
+   TABLE COMPONENT
+   ============================================ */
+
+.table {
+    /* Table element */
+}
+
+.table__head {
+    /* Table header */
+}
+
+.table__body {
+    /* Table body */
+}
+
+.table__row {
+    /* Table row */
+}
+
+.table__header {
+    /* Table header cell */
+}
+
+.table__cell {
+    /* Table data cell */
+}
+
+/* ============================================
+   HEADER NAVIGATION COMPONENT
+   ============================================ */
+
+.header__menu-toggle {
+    /* Hamburger menu toggle button */
+}
+
+.header__menu-icon {
+    /* Hamburger menu icon */
+}
+
+.header__nav {
+    /* Navigation container */
+}
+
+.header__nav-list {
+    /* Navigation list */
+}
+
+.header__nav-item {
+    /* Navigation list item */
+}
+
+.header__nav-link {
+    /* Navigation link */
+}
+
+.header__nav--open {
+    /* Open navigation state */
+}
+
+/* ============================================
+   RESPONSIVE COMPONENT ADJUSTMENTS
+   ============================================ */
+
+/* Small devices (landscape phones, 480px and up) */
+@media (min-width: 480px) {
+    /* Component adjustments for 480px+ */
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    /* Component adjustments for 768px+ */
+}
+
+/* Large devices (desktops, 1024px and up) */
+@media (min-width: 1024px) {
+    /* Component adjustments for 1024px+ */
+}
+
