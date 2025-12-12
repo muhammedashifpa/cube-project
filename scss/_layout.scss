@@ -10,11 +10,11 @@
    ============================================ */
 
 .header {
-    /* Header layout styles */
+  /* Header layout styles */
 }
 
 .header__container {
-    /* Header container styles */
+  /* Header container styles */
 }
 
 /* ============================================
@@ -22,7 +22,7 @@
    ============================================ */
 
 .main {
-    /* Main content layout */
+  /* Main content layout */
 }
 
 /* ============================================
@@ -30,19 +30,19 @@
    ============================================ */
 
 .product {
-    /* Product section layout */
+  /* Product section layout */
 }
 
 .product__container {
-    /* Product container layout */
+  /* Product container layout */
 }
 
 .product__image-section {
-    /* Product image section layout */
+  /* Product image section layout */
 }
 
 .product__info-section {
-    /* Product info section layout */
+  /* Product info section layout */
 }
 
 /* ============================================
@@ -50,11 +50,11 @@
    ============================================ */
 
 .accordion-section {
-    /* Accordion section layout */
+  /* Accordion section layout */
 }
 
 .accordion-section__container {
-    /* Accordion section container */
+  /* Accordion section container */
 }
 
 /* ============================================
@@ -62,15 +62,15 @@
    ============================================ */
 
 .counter-section {
-    /* Counter section layout */
+  /* Counter section layout */
 }
 
 .counter-section__container {
-    /* Counter section container */
+  /* Counter section container */
 }
 
 .counter-section__grid {
-    /* Counter grid layout */
+  /* Counter grid layout */
 }
 
 /* ============================================
@@ -78,11 +78,11 @@
    ============================================ */
 
 .table-section {
-    /* Table section layout */
+  /* Table section layout */
 }
 
 .table-section__container {
-    /* Table section container */
+  /* Table section container */
 }
 
 /* ============================================
@@ -90,11 +90,51 @@
    ============================================ */
 
 .footer {
-    /* Footer layout */
+  background-color: var(--color-primary);
+  padding: var(--spacing-2xl) var(--spacing-md);
+  color: var(--color-footer-text);
 }
 
 .footer__container {
-    /* Footer container */
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2xl);
+}
+
+.footer__row {
+  display: block;
+}
+
+.footer__row--logo {
+  width: 100%;
+}
+
+.footer__row--content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-xl);
+}
+
+.footer__newsletter {
+  grid-column: 1 / -1;
+}
+
+.footer__logo-section {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__social {
+  display: flex;
+  align-items: flex-start;
 }
 
 /* ============================================
@@ -105,16 +145,31 @@
 
 /* Small devices (landscape phones, 480px and up) */
 @media (min-width: 480px) {
-    /* 480px+ layout adjustments */
+  /* 480px+ layout adjustments */
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    /* 768px+ layout adjustments */
+  /* 768px+ layout adjustments */
+  .footer__row--content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer__newsletter {
+    grid-column: 1 / -1;
+  }
 }
 
 /* Large devices (desktops, 1024px and up) */
 @media (min-width: 1024px) {
-    /* 1024px+ layout adjustments */
-}
+  /* 1024px+ layout adjustments */
+  .footer__row--content {
+    grid-template-columns: 1fr 1fr 1fr 3fr;
+    gap: var(--spacing-3xl);
+    align-items: start;
+  }
 
+  .footer__newsletter {
+    grid-column: auto;
+  }
+}

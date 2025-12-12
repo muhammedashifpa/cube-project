@@ -9,19 +9,19 @@
    ============================================ */
 
 .btn {
-    /* Base button styles */
+  /* Base button styles */
 }
 
 .btn--primary {
-    /* Primary button variant */
+  /* Primary button variant */
 }
 
 .btn--secondary {
-    /* Secondary button variant */
+  /* Secondary button variant */
 }
 
 .btn--cart {
-    /* Cart button specific styles */
+  /* Cart button specific styles */
 }
 
 /* ============================================
@@ -29,71 +29,71 @@
    ============================================ */
 
 .slider {
-    /* Slider container */
+  /* Slider container */
 }
 
 .slider__main {
-    /* Main slider area */
+  /* Main slider area */
 }
 
 .slider__viewport {
-    /* Slider viewport */
+  /* Slider viewport */
 }
 
 .slider__track {
-    /* Slider track */
+  /* Slider track */
 }
 
 .slider__slide {
-    /* Individual slide */
+  /* Individual slide */
 }
 
 .slider__image {
-    /* Slide image */
+  /* Slide image */
 }
 
 .slider__arrow {
-    /* Slider navigation arrow */
+  /* Slider navigation arrow */
 }
 
 .slider__arrow--prev {
-    /* Previous arrow */
+  /* Previous arrow */
 }
 
 .slider__arrow--next {
-    /* Next arrow */
+  /* Next arrow */
 }
 
 .slider__arrow-icon {
-    /* Arrow icon */
+  /* Arrow icon */
 }
 
 .slider__dots {
-    /* Dots container */
+  /* Dots container */
 }
 
 .slider__dot {
-    /* Individual dot */
+  /* Individual dot */
 }
 
 .slider__dot--active {
-    /* Active dot state */
+  /* Active dot state */
 }
 
 .slider__thumbnails {
-    /* Thumbnails container */
+  /* Thumbnails container */
 }
 
 .slider__thumbnail {
-    /* Individual thumbnail */
+  /* Individual thumbnail */
 }
 
 .slider__thumbnail--active {
-    /* Active thumbnail state */
+  /* Active thumbnail state */
 }
 
 .slider__thumbnail-image {
-    /* Thumbnail image */
+  /* Thumbnail image */
 }
 
 /* ============================================
@@ -101,39 +101,39 @@
    ============================================ */
 
 .subscription {
-    /* Subscription container */
+  /* Subscription container */
 }
 
 .subscription__title {
-    /* Subscription title */
+  /* Subscription title */
 }
 
 .subscription__options {
-    /* Subscription options container */
+  /* Subscription options container */
 }
 
 .subscription__option {
-    /* Individual subscription option */
+  /* Individual subscription option */
 }
 
 .subscription__radio {
-    /* Radio input */
+  /* Radio input */
 }
 
 .subscription__label {
-    /* Radio label */
+  /* Radio label */
 }
 
 .subscription__expand {
-    /* Expand button */
+  /* Expand button */
 }
 
 .subscription__expand-text {
-    /* Expand button text */
+  /* Expand button text */
 }
 
 .subscription__expand-icon {
-    /* Expand icon */
+  /* Expand icon */
 }
 
 /* ============================================
@@ -141,35 +141,35 @@
    ============================================ */
 
 .accordion {
-    /* Accordion container */
+  /* Accordion container */
 }
 
 .accordion__item {
-    /* Individual accordion item */
+  /* Individual accordion item */
 }
 
 .accordion__header {
-    /* Accordion header/button */
+  /* Accordion header/button */
 }
 
 .accordion__title {
-    /* Accordion item title */
+  /* Accordion item title */
 }
 
 .accordion__icon {
-    /* Accordion expand/collapse icon */
+  /* Accordion expand/collapse icon */
 }
 
 .accordion__content {
-    /* Accordion content area */
+  /* Accordion content area */
 }
 
 .accordion__text {
-    /* Accordion text content */
+  /* Accordion text content */
 }
 
 .accordion__item--active .accordion__content {
-    /* Active accordion item content */
+  /* Active accordion item content */
 }
 
 /* ============================================
@@ -177,19 +177,19 @@
    ============================================ */
 
 .counter {
-    /* Counter container */
+  /* Counter container */
 }
 
 .counter__value {
-    /* Counter numeric value */
+  /* Counter numeric value */
 }
 
 .counter__label {
-    /* Counter label (%, +, etc.) */
+  /* Counter label (%, +, etc.) */
 }
 
 .counter__description {
-    /* Counter description text */
+  /* Counter description text */
 }
 
 /* ============================================
@@ -197,27 +197,27 @@
    ============================================ */
 
 .table {
-    /* Table element */
+  /* Table element */
 }
 
 .table__head {
-    /* Table header */
+  /* Table header */
 }
 
 .table__body {
-    /* Table body */
+  /* Table body */
 }
 
 .table__row {
-    /* Table row */
+  /* Table row */
 }
 
 .table__header {
-    /* Table header cell */
+  /* Table header cell */
 }
 
 .table__cell {
-    /* Table data cell */
+  /* Table data cell */
 }
 
 /* ============================================
@@ -225,31 +225,259 @@
    ============================================ */
 
 .header__menu-toggle {
-    /* Hamburger menu toggle button */
+  /* Hamburger menu toggle button */
 }
 
 .header__menu-icon {
-    /* Hamburger menu icon */
+  /* Hamburger menu icon */
 }
 
 .header__nav {
-    /* Navigation container */
+  /* Navigation container */
 }
 
 .header__nav-list {
-    /* Navigation list */
+  /* Navigation list */
 }
 
 .header__nav-item {
-    /* Navigation list item */
+  /* Navigation list item */
 }
 
 .header__nav-link {
-    /* Navigation link */
+  /* Navigation link */
 }
 
 .header__nav--open {
-    /* Open navigation state */
+  /* Open navigation state */
+}
+
+/* ============================================
+   FOOTER COMPONENTS
+   ============================================ */
+
+/* Footer Logo */
+.footer__logo {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-logo-footer);
+  line-height: var(--line-height-none);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--color-footer-text);
+  margin: 0;
+}
+
+/* Footer Navigation */
+.footer__nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__nav-item {
+  margin: 0;
+}
+
+.footer__nav-link {
+  font-family: var(--font-family-secondary);
+  font-weight: var(--font-weight-light);
+  font-size: var(--font-size-nav-footer);
+  line-height: var(--line-height-body);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--color-footer-text);
+  text-decoration: none;
+  transition: var(--transition-fast);
+  display: inline-block;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-footer-text);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+}
+
+/* Footer Social Media */
+.footer__social-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__social-item {
+  margin: 0;
+}
+
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--color-footer-text);
+  text-decoration: none;
+  transition: var(--transition-fast);
+  font-family: var(--font-family-secondary);
+  font-weight: var(--font-weight-light);
+  font-size: var(--font-size-nav-footer);
+  line-height: var(--line-height-body);
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-footer-text);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+}
+
+.footer__social-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+  flex-shrink: 0;
+}
+
+.footer__social-label {
+  display: inline-block;
+}
+
+/* Footer Newsletter */
+.footer__newsletter {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.footer__newsletter-title {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--color-newsletter-title);
+  margin: 0 0 var(--spacing-md) 0;
+}
+
+.footer__newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.footer__newsletter-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+
+  @media (min-width: 480px) {
+    flex-direction: row;
+    align-items: stretch;
+  }
+}
+
+.footer__newsletter-input {
+  flex: 1;
+  padding: var(--button-padding-y) var(--spacing-md);
+  border: 1px solid var(--color-footer-text);
+  border-radius: 0;
+  background-color: transparent;
+  color: var(--color-footer-text);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  transition: var(--transition-normal);
+
+  &::placeholder {
+    color: #a0a0a0;
+    opacity: 1;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-newsletter-title);
+    box-shadow: 0 0 0 2px rgba(254, 243, 228, 0.2);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-newsletter-title);
+    outline-offset: 2px;
+  }
+}
+
+.footer__newsletter-button {
+  padding: var(--button-padding-y) var(--button-padding-x);
+  background-color: var(--color-subscribe-btn);
+  color: var(--color-footer-text);
+  border: none;
+  border-radius: 0;
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  letter-spacing: var(--letter-spacing-normal);
+  cursor: pointer;
+  transition: var(--transition-normal);
+  white-space: nowrap;
+
+  &:hover {
+    background-color: #7a4510;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-footer-text);
+    outline-offset: 2px;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+.footer__newsletter-privacy {
+  font-family: var(--font-family-secondary);
+  font-weight: var(--font-weight-light);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-body);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--color-footer-text);
+  margin: 0;
+}
+
+.footer__newsletter-link {
+  color: var(--color-footer-text);
+  text-decoration: underline;
+  transition: var(--transition-fast);
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-footer-text);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
 }
 
 /* ============================================
@@ -258,16 +486,15 @@
 
 /* Small devices (landscape phones, 480px and up) */
 @media (min-width: 480px) {
-    /* Component adjustments for 480px+ */
+  /* Component adjustments for 480px+ */
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    /* Component adjustments for 768px+ */
+  /* Component adjustments for 768px+ */
 }
 
 /* Large devices (desktops, 1024px and up) */
 @media (min-width: 1024px) {
-    /* Component adjustments for 1024px+ */
+  /* Component adjustments for 1024px+ */
 }
-
