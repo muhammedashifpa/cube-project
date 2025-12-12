@@ -18,6 +18,7 @@
 }
 
 html {
+  font-size: 16px; /* Base font size for rem calculations */
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -90,68 +91,158 @@ input[type="number"] {
 
 /* ============================================
    CSS VARIABLES
-   (Placeholders - values to be assigned later)
+   All values extracted from Figma design
    ============================================ */
 
 :root {
-  /* Colors */
-  --color-primary: /* to be assigned */ ;
-  --color-secondary: /* to be assigned */ ;
-  --color-accent: /* to be assigned */ ;
-  --color-text: /* to be assigned */ ;
-  --color-text-light: /* to be assigned */ ;
-  --color-bg: /* to be assigned */ ;
-  --color-bg-light: /* to be assigned */ ;
-  --color-bg-dark: /* to be assigned */ ;
-  --color-border: /* to be assigned */ ;
-  --color-error: /* to be assigned */ ;
-  --color-success: /* to be assigned */ ;
+  /* ============================================
+     COLORS
+     ============================================ */
+  --color-primary: #032e15;
+  --color-primary-light: #016630;
+  --color-primary-mid: #008236;
+  --color-primary-bright: #00c950;
 
-  /* Typography */
-  --font-family-primary: /* to be assigned */ ;
-  --font-family-secondary: /* to be assigned */ ;
-  --font-size-xs: /* to be assigned */ ;
-  --font-size-sm: /* to be assigned */ ;
-  --font-size-base: /* to be assigned */ ;
-  --font-size-md: /* to be assigned */ ;
-  --font-size-lg: /* to be assigned */ ;
-  --font-size-xl: /* to be assigned */ ;
-  --font-size-2xl: /* to be assigned */ ;
-  --font-size-3xl: /* to be assigned */ ;
-  --font-weight-normal: /* to be assigned */ ;
-  --font-weight-medium: /* to be assigned */ ;
-  --font-weight-semibold: /* to be assigned */ ;
-  --font-weight-bold: /* to be assigned */ ;
-  --line-height-tight: /* to be assigned */ ;
-  --line-height-normal: /* to be assigned */ ;
-  --line-height-relaxed: /* to be assigned */ ;
+  --color-secondary: #032e15;
+  --color-accent: #0d542b;
+  --color-star: #00c950;
 
-  /* Spacing */
-  --spacing-xs: /* to be assigned */ ;
-  --spacing-sm: /* to be assigned */ ;
-  --spacing-md: /* to be assigned */ ;
-  --spacing-lg: /* to be assigned */ ;
-  --spacing-xl: /* to be assigned */ ;
-  --spacing-2xl: /* to be assigned */ ;
-  --spacing-3xl: /* to be assigned */ ;
+  --color-text: #032e15;
+  --color-text-nav: #162456;
+  --color-text-light: #919798;
+  --color-text-muted: #b8b8b8;
+  --color-text-white: #ffffff;
+  --color-footer-text: #ffffff;
+  --color-newsletter-title: #fef3e4;
 
-  /* Border Radius */
-  --radius-sm: /* to be assigned */ ;
-  --radius-md: /* to be assigned */ ;
-  --radius-lg: /* to be assigned */ ;
-  --radius-full: /* to be assigned */ ;
+  --color-bg: #ffffff;
+  --color-bg-light: #f8fafc;
+  --color-bg-dark: #0f172a;
 
-  /* Shadows */
-  --shadow-sm: /* to be assigned */ ;
-  --shadow-md: /* to be assigned */ ;
-  --shadow-lg: /* to be assigned */ ;
+  --color-border: #919798;
+  --color-border-light: #b8b8b8;
+  --color-subscribe-btn: #653b09;
 
-  /* Transitions */
-  --transition-fast: /* to be assigned */ ;
-  --transition-normal: /* to be assigned */ ;
-  --transition-slow: /* to be assigned */ ;
+  --color-error: #ef4444;
+  --color-success: #10b981;
 
-  /* Z-index layers */
+  /* ============================================
+     GRADIENTS
+     ============================================ */
+  --gradient-primary: linear-gradient(180deg, #032e15 0%, #016630 100%);
+  --gradient-primary-transparent: linear-gradient(
+    180deg,
+    rgba(3, 46, 21, 0.6) 0%,
+    rgba(1, 102, 48, 0.6) 100%
+  );
+  --gradient-badge: linear-gradient(
+    270deg,
+    #032e15 0%,
+    #008236 51.92%,
+    #00c950 100%
+  );
+
+  /* ============================================
+     TYPOGRAPHY - FONT FAMILIES
+     ============================================ */
+  --font-family-primary: "Inter", sans-serif;
+  --font-family-secondary: "Oxanium", sans-serif;
+
+  /* ============================================
+     TYPOGRAPHY - FONT SIZES (rem values)
+     Base: 16px = 1rem
+     ============================================ */
+  --font-size-xs: 0.759rem; // 12.14px (privacy text)
+  --font-size-sm: 0.8125rem; // 13px (reviews)
+  --font-size-base: 0.875rem; // 14px (subscription description)
+  --font-size-nav-footer: 0.885rem; // 14.16px (footer nav links)
+  --font-size-body: 1.01125rem; // 16.18px (nav, description, newsletter, subscribe)
+  --font-size-md: 1.125rem; // 18px (standard medium)
+  --font-size-lg: 1.25rem; // 20px (subscription label, price)
+  --font-size-xl: 1.264rem; // 20.23px (Most Popular badge)
+  --font-size-2xl: 1.375rem; // 22px ("power" label)
+  --font-size-3xl: 2.25rem; // 36px (Main Logo "GTG Perfumes")
+  --font-size-logo-footer: 2.645rem; // 42.32px (Footer "GTG" logo)
+  --font-size-hero: 3.5rem; // 56px ("Live your best life")
+  --font-size-stat: 4.5rem; // 72px ("10x")
+
+  /* ============================================
+     TYPOGRAPHY - FONT WEIGHTS
+     ============================================ */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* ============================================
+     TYPOGRAPHY - LINE HEIGHTS
+     ============================================ */
+  --line-height-none: 1; // Logo, stats, reviews (100%)
+  --line-height-tight: 1.04; // "power" label (104%)
+  --line-height-normal: 1.2; // Most Popular badge
+  --line-height-body: 1.5; // Nav, footer nav, newsletter, privacy (150%)
+  --line-height-relaxed: 1.12; // Hero headline (112%)
+  --line-height-loose: 1.875; // Description text
+
+  /* ============================================
+     TYPOGRAPHY - LETTER SPACING
+     ============================================ */
+  --letter-spacing-tight: -0.083rem; // -1.33px (hero headline)
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.056rem; // 0.9px (subscription text, prices)
+
+  /* ============================================
+     SPACING (8px base scale)
+     ============================================ */
+  --spacing-xs: 0.25rem; // 4px
+  --spacing-sm: 0.5rem; // 8px
+  --spacing-md: 1rem; // 16px
+  --spacing-lg: 1.5rem; // 24px
+  --spacing-xl: 2rem; // 32px
+  --spacing-2xl: 3rem; // 48px
+  --spacing-3xl: 4rem; // 64px
+
+  /* ============================================
+     BUTTON PADDING
+     ============================================ */
+  --button-padding-y: 0.759rem; // 12.14px (top/bottom)
+  --button-padding-x: 1.517rem; // 24.27px (left/right)
+  --button-gap: 0.506rem; // 8.09px (gap between elements)
+
+  /* ============================================
+     BORDER
+     ============================================ */
+  --border-width: 1.01px;
+  --border-color: #b8b8b8;
+
+  /* ============================================
+     BORDER RADIUS
+     ============================================ */
+  --radius-sm: 0.25rem; // 4px
+  --radius-md: 0.5rem; // 8px
+  --radius-lg: 1rem; // 16px
+  --radius-full: 9999px; // Full circle
+
+  /* ============================================
+     SHADOWS
+     ============================================ */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  /* ============================================
+     TRANSITIONS
+     ============================================ */
+  --transition-fast: 150ms ease-in-out;
+  --transition-normal: 300ms ease-in-out;
+  --transition-slow: 500ms ease-in-out;
+
+  /* ============================================
+     Z-INDEX LAYERS
+     ============================================ */
   --z-index-base: 1;
   --z-index-dropdown: 10;
   --z-index-sticky: 20;
@@ -165,12 +256,12 @@ input[type="number"] {
    ============================================ */
 
 body {
-  font-family: var(--font-family-primary, system-ui, -apple-system, sans-serif);
-  font-size: var(--font-size-base, 16px);
-  font-weight: var(--font-weight-normal, 400);
-  line-height: var(--line-height-normal, 1.5);
-  color: var(--color-text, #000);
-  background-color: var(--color-bg, #fff);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
 }
 
 h1,
@@ -179,8 +270,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: var(--font-weight-bold, 700);
-  line-height: var(--line-height-tight, 1.2);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-relaxed);
 }
 
 h1 {
@@ -217,7 +308,7 @@ p {
 
 /* Focus styles */
 :focus-visible {
-  outline: 2px solid var(--color-primary, #0066cc);
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
 
@@ -226,10 +317,10 @@ p {
   position: absolute;
   top: -40px;
   left: 0;
-  background: var(--color-bg-dark, #000);
-  color: var(--color-bg, #fff);
-  padding: var(--spacing-sm, 0.5rem) var(--spacing-md, 1rem);
-  z-index: var(--z-index-tooltip, 50);
+  background: var(--color-bg-dark);
+  color: var(--color-bg);
+  padding: var(--spacing-sm) var(--spacing-md);
+  z-index: var(--z-index-tooltip);
 }
 
 .skip-link:focus {
