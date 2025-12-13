@@ -61,7 +61,7 @@
 .accordion-section__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0.885rem; // 14.16px gap on mobile (reduced from 114px)
+  gap: 2.3rem; // 2.3rem gap on mobile
   align-items: center; // Center align items
 }
 
@@ -110,7 +110,7 @@
 .statistics-section {
   background: var(--gradient-primary);
   padding: var(--spacing-3xl) 4rem; // 64px horizontal padding
-  margin: 0; // No margin on mobile
+  margin: 0; // No margin
 }
 
 .statistics-section__container {
@@ -133,7 +133,8 @@
 }
 
 .table-section__container {
-  /* Table section container */
+  max-width: 960px; // 60rem
+  margin: 0 auto;
 }
 
 /* ============================================
@@ -224,7 +225,7 @@
   }
 
   .statistics-section {
-    margin: var(--spacing-3xl) 0; // Add margin on desktop
+    margin: 0; // No margin
   }
 
   .statistics-section__grid {

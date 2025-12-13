@@ -288,6 +288,7 @@
    ============================================ */
 
 .accordion-image__img {
+  max-height: 44.5rem; // 712px
   width: 100%;
   height: auto;
   display: block;
@@ -347,31 +348,235 @@
 }
 
 /* ============================================
-   TABLE COMPONENT
+   TABLE SECTION TITLE
    ============================================ */
 
-.table {
-  /* Table element */
+.table-section__title {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-semibold); // 600
+  font-size: var(--font-size-title-mobile); // Responsive: 28px mobile
+  line-height: var(--line-height-none); // 100%
+  letter-spacing: var(--letter-spacing-normal); // 0px
+  text-align: center;
+  color: var(--color-text); // #032E15
+  margin: 0 0 var(--spacing-2xl) 0;
 }
 
-.table__head {
-  /* Table header */
+/* ============================================
+   COMPARISON TABLE COMPONENT
+   ============================================ */
+
+.comparison-table__wrapper {
+  overflow-x: auto; // Enable horizontal scrolling for table only
+  -webkit-overflow-scrolling: touch; // Smooth scrolling on iOS
+  margin-bottom: var(--spacing-2xl);
+  width: 100%;
 }
 
-.table__body {
-  /* Table body */
+.comparison-table {
+  width: 100%;
+  min-width: 600px; // Minimum width for table to be scrollable
+  border-collapse: collapse;
 }
 
-.table__row {
-  /* Table row */
+.comparison-table__head {
+  /* Header styles */
 }
 
-.table__header {
-  /* Table header cell */
+.comparison-table__row {
+  /* Row styles */
 }
 
-.table__cell {
-  /* Table data cell */
+.comparison-table__header {
+  /* Header cell styles */
+  padding: var(--spacing-md);
+  text-align: center;
+  border-bottom: 1.01px solid var(--color-table-border); // #666666
+}
+
+.comparison-table__header--qualities {
+  text-align: left;
+  font-family: var(--font-family-primary); // Inter
+  font-weight: var(--font-weight-bold); // 700
+  font-size: 1rem; // 16px
+  line-height: 1.436875; // 22.99px / 16px
+  letter-spacing: 0;
+  color: var(--color-table-border-active); // #322D2D
+}
+
+.comparison-table__header--gtg {
+  background-color: var(--color-table-row-bg); // #F0FDF4 for GTG column
+  border-bottom: 1.01px dashed var(--color-table-border-active); // #322D2D dashed border
+  border-top-left-radius: 0.9375rem; // 15px
+  border-top-right-radius: 0.9375rem; // 15px
+}
+
+.comparison-table__product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.comparison-table__product-image {
+  width: 88px;
+  height: 87px;
+  object-fit: cover;
+  border-radius: 0.9375rem; // 15px
+}
+
+.comparison-table__product-name {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-body);
+  color: var(--color-text);
+  text-align: center;
+}
+
+.comparison-table__product-name--gtg {
+  font-family: var(--font-family-primary); // Inter
+  font-weight: var(--font-weight-light); // 300
+  font-size: 1.25rem; // 20px
+  line-height: 1; // 100%
+  letter-spacing: 0;
+  color: #000000;
+  text-align: center;
+}
+
+.comparison-table__product-name--arose {
+  font-family: var(--font-family-primary); // Inter
+  font-weight: var(--font-weight-light); // 300
+  font-size: 0.75rem; // 12px
+  line-height: 1.596666667; // 19.16px / 12px
+  letter-spacing: 0;
+  text-align: center;
+  margin-top: var(--spacing-lg); // 24px
+}
+
+.comparison-table__body {
+  /* Body styles */
+}
+
+.comparison-table__cell {
+  /* Cell styles */
+  padding: var(--spacing-md);
+  text-align: center;
+  white-space: nowrap; // Prevent text wrapping
+  border-bottom: 1.01px solid var(--color-table-border); // #666666
+  font-family: var(--font-family-primary); // Inter
+  font-weight: var(--font-weight-light); // 300
+  font-size: 1rem; // 16px
+  line-height: 1.1975; // 19.16px / 16px
+  letter-spacing: 0;
+  color: var(--color-table-border); // #666666
+}
+
+.comparison-table__cell--qualities {
+  text-align: left;
+  white-space: normal; // Allow wrapping for quality names
+  font-family: var(--font-family-primary); // Inter
+  font-weight: var(--font-weight-bold); // 700
+  font-size: 1rem; // 16px
+  line-height: 1.1975; // 19.16px / 16px
+  letter-spacing: 0;
+  color: var(--color-table-border); // #666666
+}
+
+.comparison-table__cell--gtg {
+  background-color: var(--color-table-row-bg); // #F0FDF4 for GTG column
+  border-bottom: 1.01px dashed var(--color-table-border-active); // #322D2D dashed border
+}
+
+.comparison-table__row:last-child .comparison-table__cell--gtg {
+  border-bottom-left-radius: 0.9375rem; // 15px
+  border-bottom-right-radius: 0.9375rem; // 15px
+}
+
+.comparison-table__checkmark {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.comparison-table__checkmark--filled {
+  /* Filled checkmark with background - only for GTG column */
+}
+
+.comparison-table__cross {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+/* CTA Button */
+.btn--cta {
+  display: block;
+  margin: var(--spacing-2xl) auto 0;
+  background: var(
+    --gradient-primary
+  ); // linear-gradient(180deg, #032E15 0%, #016630 100%)
+  font-family: var(--font-family-primary); // Inter
+  font-weight: var(--font-weight-medium); // 500
+  font-size: 1.25rem; // 20px
+  line-height: 2rem; // 32px
+  letter-spacing: 0;
+  color: #ffffff;
+  padding: 0.75rem var(--spacing-lg); // 12px vertical, 24px horizontal
+  border-radius: var(--radius-full); // Pill shape (9999px)
+  transition: transform var(--transition-normal),
+    box-shadow var(--transition-normal);
+  cursor: pointer;
+  border: none;
+  position: relative;
+  overflow: hidden;
+
+  // Shining effect overlay
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.3),
+      transparent
+    );
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+  }
+
+  &:hover {
+    box-shadow: 0 8px 16px rgba(3, 46, 21, 0.3);
+
+    &::before {
+      opacity: 1;
+      animation: shine 0.6s ease-in-out;
+    }
+  }
+
+  &:active {
+    box-shadow: 0 4px 8px rgba(3, 46, 21, 0.2);
+  }
+
+  &:focus {
+    outline: 2px solid rgba(255, 255, 255, 0.5);
+    outline-offset: 2px;
+  }
+}
+
+// Shine animation keyframes - single sweep on hover
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
 }
 
 /* ============================================
@@ -661,7 +866,8 @@
   }
 
   /* Responsive typography - Tablet */
-  .accordion-section__title {
+  .accordion-section__title,
+  .table-section__title {
     font-size: var(--font-size-title-tablet); // 32px on tablet
   }
 
@@ -676,7 +882,8 @@
   /* Component adjustments for 1024px+ */
 
   /* Responsive typography - Desktop */
-  .accordion-section__title {
+  .accordion-section__title,
+  .table-section__title {
     font-size: var(--font-size-title-desktop); // 36px on desktop
   }
 
