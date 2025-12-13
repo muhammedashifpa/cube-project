@@ -144,11 +144,12 @@
 .accordion-section__title {
   font-family: var(--font-family-primary);
   font-weight: var(--font-weight-semibold);
-  font-size: var(--font-size-3xl); // 36px
+  font-size: var(--font-size-title-mobile); // Responsive: 28px mobile
   line-height: var(--line-height-none); // 100%
   letter-spacing: var(--letter-spacing-normal);
   color: var(--color-text);
-  margin: 0 0 var(--spacing-2xl) 0;
+  margin: 0 0 2.125rem 0; // 34px bottom margin
+  text-align: left; // Align title to left within accordion column
 }
 
 /* Accordion Container */
@@ -261,12 +262,12 @@
   overflow: hidden;
   transition: max-height var(--transition-normal),
     padding var(--transition-normal);
-  padding: 0 var(--spacing-md); // Mobile: 0 16px initially
+  padding: 0 var(--spacing-lg); // 0 24px initially
 }
 
 .accordion__item--active .accordion__content {
-  max-height: 500px; // Adjust based on content
-  padding: 0 var(--spacing-md) var(--spacing-lg); // Mobile: 0 16px 24px
+  /* max-height handled by JavaScript dynamically */
+  padding: 0 var(--spacing-lg); // 0 24px (no bottom padding)
 }
 
 /* Accordion Text */
@@ -278,7 +279,20 @@
   letter-spacing: var(--letter-spacing-normal);
   color: var(--color-text-description);
   margin: 0;
-  padding-top: var(--spacing-lg); // 24px gap
+  padding-top: var(--spacing-lg); // 24px top
+  padding-bottom: var(--spacing-lg); // 24px bottom
+}
+
+/* ============================================
+   ACCORDION IMAGE COMPONENT
+   ============================================ */
+
+.accordion-image__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-lg); // 16px rounded corners
+  object-fit: cover;
 }
 
 /* ============================================
@@ -302,7 +316,7 @@
 .statistics-section__value {
   font-family: var(--font-family-primary);
   font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-statistics-value);
+  font-size: var(--font-size-stat-value-mobile); // Responsive: 32px mobile
   line-height: var(--line-height-none);
   letter-spacing: var(--letter-spacing-normal);
   color: var(--color-footer-text);
@@ -313,7 +327,7 @@
 .statistics-section__percent {
   font-family: var(--font-family-primary);
   font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-statistics-value);
+  font-size: var(--font-size-stat-value-mobile); // Responsive: 32px mobile
   line-height: var(--line-height-none);
   letter-spacing: var(--letter-spacing-normal);
   color: var(--color-footer-text);
@@ -638,15 +652,36 @@
   }
 
   .accordion__content {
-    padding: 0 var(--spacing-xl); // 0 32px
+    padding: 0 var(--spacing-lg); // 0 24px
   }
 
   .accordion__item--active .accordion__content {
-    padding: 0 var(--spacing-xl) var(--spacing-lg); // 0 32px 24px
+    /* max-height handled by JavaScript dynamically */
+    padding: 0 var(--spacing-lg); // 0 24px (no bottom padding)
+  }
+
+  /* Responsive typography - Tablet */
+  .accordion-section__title {
+    font-size: var(--font-size-title-tablet); // 32px on tablet
+  }
+
+  .statistics-section__value,
+  .statistics-section__percent {
+    font-size: var(--font-size-stat-value-tablet); // 36px on tablet
   }
 }
 
 /* Large devices (desktops, 1024px and up) */
 @media (min-width: 1024px) {
   /* Component adjustments for 1024px+ */
+
+  /* Responsive typography - Desktop */
+  .accordion-section__title {
+    font-size: var(--font-size-title-desktop); // 36px on desktop
+  }
+
+  .statistics-section__value,
+  .statistics-section__percent {
+    font-size: var(--font-size-stat-value-desktop); // 40px on desktop
+  }
 }

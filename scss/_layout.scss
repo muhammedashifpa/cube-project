@@ -30,7 +30,7 @@
    ============================================ */
 
 .product {
-  /* Product section layout */
+  padding: var(--spacing-3xl) 4rem; // 64px horizontal padding
 }
 
 .product__container {
@@ -50,18 +50,57 @@
    ============================================ */
 
 .accordion-section {
-  padding: var(--spacing-3xl) var(--spacing-md);
+  padding: var(--spacing-3xl) 4rem; // 64px horizontal padding
 }
 
 .accordion-section__container {
-  max-width: var(--container-max-width);
-  margin: 0 auto;
+  width: 100%;
+  // Removed auto margin
+}
+
+.accordion-section__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.885rem; // 14.16px gap on mobile (reduced from 114px)
+  align-items: center; // Center align items
+}
+
+.accordion-image {
+  order: 1; // Image first on mobile (top)
+  width: 100%;
 }
 
 .accordion {
+  order: 2; // Accordion second on mobile (below image)
   display: flex;
   flex-direction: column;
   gap: 0.9375rem; // 15px between items
+}
+
+@media (min-width: 768px) {
+  .accordion-section {
+    padding: var(--spacing-3xl) 4rem; // 64px horizontal padding
+  }
+
+  .accordion-section__grid {
+    grid-template-columns: 1fr 1fr; // Two columns on tablet+
+    gap: var(--spacing-2xl); // 48px gap on tablet (reduced from 114px)
+    align-items: center; // Center align items
+  }
+
+  .accordion-image {
+    order: 2; // Image on right on tablet+
+  }
+
+  .accordion {
+    order: 1; // Accordion on left on tablet+
+  }
+}
+
+@media (min-width: 1024px) {
+  .accordion-section__grid {
+    gap: 7.125rem; // 114px gap maintained on desktop
+  }
 }
 
 /* ============================================
@@ -70,8 +109,8 @@
 
 .statistics-section {
   background: var(--gradient-primary);
-  padding: var(--spacing-3xl) var(--spacing-md);
-  margin: var(--spacing-3xl) 0;
+  padding: var(--spacing-3xl) 4rem; // 64px horizontal padding
+  margin: 0; // No margin on mobile
 }
 
 .statistics-section__container {
@@ -90,7 +129,7 @@
    ============================================ */
 
 .table-section {
-  /* Table section layout */
+  padding: var(--spacing-3xl) 4rem; // 64px horizontal padding
 }
 
 .table-section__container {
@@ -103,7 +142,7 @@
 
 .footer {
   background-color: var(--color-primary);
-  padding: var(--spacing-2xl) var(--spacing-md);
+  padding: var(--spacing-2xl) 4rem; // 64px horizontal padding
   color: var(--color-footer-text);
 }
 
@@ -180,6 +219,14 @@
 /* Large devices (desktops, 1024px and up) */
 @media (min-width: 1024px) {
   /* 1024px+ layout adjustments */
+  .accordion-section__grid {
+    gap: 7.125rem; // 114px gap on desktop
+  }
+
+  .statistics-section {
+    margin: var(--spacing-3xl) 0; // Add margin on desktop
+  }
+
   .statistics-section__grid {
     grid-template-columns: repeat(4, 1fr);
     gap: var(--spacing-2xl);

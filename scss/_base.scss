@@ -173,6 +173,19 @@ input[type="number"] {
   --font-size-statistics-text: 1rem; // 16px (statistics description)
 
   /* ============================================
+     TYPOGRAPHY - RESPONSIVE FONT SIZES
+     ============================================ */
+  /* Section Titles - Responsive */
+  --font-size-title-mobile: 1.75rem; // 28px (mobile)
+  --font-size-title-tablet: 2rem; // 32px (tablet 768px+)
+  --font-size-title-desktop: 2.25rem; // 36px (desktop 1024px+)
+
+  /* Statistics Values - Responsive */
+  --font-size-stat-value-mobile: 2rem; // 32px (mobile)
+  --font-size-stat-value-tablet: 2.25rem; // 36px (tablet 768px+)
+  --font-size-stat-value-desktop: 2.5rem; // 40px (desktop 1024px+)
+
+  /* ============================================
      TYPOGRAPHY - FONT WEIGHTS
      ============================================ */
   --font-weight-light: 300;
