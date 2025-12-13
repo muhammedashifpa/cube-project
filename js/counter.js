@@ -44,7 +44,7 @@ function animateCounter(element, target, duration = 2000) {
  * Initialize counter animations with IntersectionObserver
  */
 export function initCounter() {
-    const counters = document.querySelectorAll('.counter__value, .statistics-section__value');
+    const counters = document.querySelectorAll('.statistics-section__value');
 
     if (counters.length === 0) return;
 
@@ -57,9 +57,7 @@ export function initCounter() {
                 const counter = entry.target;
                 const target = parseInt(counter.getAttribute('data-target'), 10);
 
-                const animatedClass = counter.classList.contains('counter__value') 
-                    ? 'counter__value--animated' 
-                    : 'statistics-section__value--animated';
+                const animatedClass = 'statistics-section__value--animated';
                 
                 if (!isNaN(target) && !counter.classList.contains(animatedClass)) {
                     counter.classList.add(animatedClass);

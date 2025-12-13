@@ -50,27 +50,18 @@
    ============================================ */
 
 .accordion-section {
-  /* Accordion section layout */
+  padding: var(--spacing-3xl) var(--spacing-md);
 }
 
 .accordion-section__container {
-  /* Accordion section container */
+  max-width: var(--container-max-width);
+  margin: 0 auto;
 }
 
-/* ============================================
-   COUNTER SECTION LAYOUT
-   ============================================ */
-
-.counter-section {
-  /* Counter section layout */
-}
-
-.counter-section__container {
-  /* Counter section container */
-}
-
-.counter-section__grid {
-  /* Counter grid layout */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9375rem; // 15px between items
 }
 
 /* ============================================
@@ -78,13 +69,13 @@
    ============================================ */
 
 .statistics-section {
-  background: linear-gradient(180deg, #032e15 0%, #016630 100%);
+  background: var(--gradient-primary);
   padding: var(--spacing-3xl) var(--spacing-md);
   margin: var(--spacing-3xl) 0;
 }
 
 .statistics-section__container {
-  max-width: 1200px;
+  max-width: var(--container-max-width);
   margin: 0 auto;
 }
 
@@ -117,7 +108,7 @@
 }
 
 .footer__container {
-  max-width: 1200px;
+  max-width: var(--container-max-width);
   margin: 0 auto;
   display: flex;
   flex-direction: column;

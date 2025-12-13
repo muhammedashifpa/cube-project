@@ -121,7 +121,11 @@ input[type="number"] {
 
   --color-border: #919798;
   --color-border-light: #b8b8b8;
+  --color-border-accordion: #cdcdcd;
   --color-subscribe-btn: #653b09;
+  --color-subscribe-btn-hover: #7a4510;
+  --color-placeholder: #a0a0a0;
+  --color-text-description: #666666;
 
   --color-error: #ef4444;
   --color-success: #10b981;
@@ -165,6 +169,8 @@ input[type="number"] {
   --font-size-logo-footer: 2.645rem; // 42.32px (Footer "GTG" logo)
   --font-size-hero: 3.5rem; // 56px ("Live your best life")
   --font-size-stat: 4.5rem; // 72px ("10x")
+  --font-size-statistics-value: 2.5rem; // 40px (statistics percentage)
+  --font-size-statistics-text: 1rem; // 16px (statistics description)
 
   /* ============================================
      TYPOGRAPHY - FONT WEIGHTS
@@ -249,6 +255,20 @@ input[type="number"] {
   --z-index-fixed: 30;
   --z-index-modal: 40;
   --z-index-tooltip: 50;
+
+  /* ============================================
+     LAYOUT DIMENSIONS
+     ============================================ */
+  --container-max-width: 1200px;
+  --icon-size: 24px;
+  --outline-width: 2px;
+  --outline-offset: 2px;
+
+  /* ============================================
+     SHADOWS - FOCUS STATES
+     ============================================ */
+  --shadow-focus-newsletter: 0 0 0 var(--outline-width) rgba(254, 243, 228, 0.2);
+  --shadow-focus-button: 0 0 0 var(--outline-width) rgba(255, 255, 255, 0.3);
 }
 
 /* ============================================
@@ -308,8 +328,8 @@ p {
 
 /* Focus styles */
 :focus-visible {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 2px;
+  outline: var(--outline-width) solid var(--color-primary);
+  outline-offset: var(--outline-offset);
 }
 
 /* Skip link for screen readers */
