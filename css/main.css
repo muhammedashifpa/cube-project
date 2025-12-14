@@ -991,6 +991,26 @@ p {
   flex-shrink: 0;
 }
 
+@media (max-width: 767px) {
+  .product__subscription-fragrance {
+    flex: 1 1 calc(50% - 0.5rem);
+    min-width: 0;
+    max-width: none;
+  }
+  .product__subscription-fragrances {
+    gap: var(--spacing-sm);
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .product__subscription-fragrance {
+    width: calc(33.333% - 0.75rem);
+  }
+}
+@media (min-width: 1024px) {
+  .product__subscription-fragrance {
+    width: 8rem;
+  }
+}
 .product__subscription-fragrance-label {
   display: flex;
   flex-direction: column;
@@ -1120,8 +1140,20 @@ p {
 .product__subscription-included-boxes {
   display: flex;
   gap: var(--spacing-md);
+  flex-wrap: wrap;
 }
 
+@media (max-width: 767px) {
+  .product__subscription-included-boxes {
+    flex-direction: column;
+  }
+  .product__subscription-included-box--every-30 {
+    width: 100%;
+  }
+  .product__subscription-included-box--one-time {
+    width: 100%;
+  }
+}
 .product__subscription-included-box {
   border: 1.01px solid #919798;
   border-radius: 0.379375rem;

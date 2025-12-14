@@ -379,8 +379,35 @@
 
 .product__subscription-fragrance {
   position: relative;
-  width: 8rem; // 128px
+  width: 8rem; // 128px (desktop default)
   flex-shrink: 0;
+}
+
+// Mobile: Make fragrance items responsive (2 columns)
+@media (max-width: 767px) {
+  .product__subscription-fragrance {
+    flex: 1 1 calc(50% - 0.5rem); // Flexible 2 columns on mobile
+    min-width: 0; // Allow shrinking
+    max-width: none; // Remove max width constraint
+  }
+
+  .product__subscription-fragrances {
+    gap: var(--spacing-sm); // 8px on mobile for tighter spacing
+  }
+}
+
+// Tablet: Adjust width for better fit (3 columns)
+@media (min-width: 768px) and (max-width: 1023px) {
+  .product__subscription-fragrance {
+    width: calc(33.333% - 0.75rem); // 3 columns on tablet
+  }
+}
+
+// Desktop: Keep original fixed width
+@media (min-width: 1024px) {
+  .product__subscription-fragrance {
+    width: 8rem; // 128px fixed on desktop
+  }
 }
 
 .product__subscription-fragrance-label {
@@ -544,6 +571,22 @@
 .product__subscription-included-boxes {
   display: flex;
   gap: var(--spacing-md); // 16px
+  flex-wrap: wrap;
+}
+
+// Mobile: Stack boxes in 2 rows
+@media (max-width: 767px) {
+  .product__subscription-included-boxes {
+    flex-direction: column; // Stack vertically on mobile
+  }
+
+  .product__subscription-included-box--every-30 {
+    width: 100%; // Full width on mobile
+  }
+
+  .product__subscription-included-box--one-time {
+    width: 100%; // Full width on mobile
+  }
 }
 
 .product__subscription-included-box {
