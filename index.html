@@ -48,119 +48,166 @@
             <!-- Hero/Product Section -->
             <section class="product">
                 <div class="product__container">
-                    <div class="product__image-section">
-                        <div class="slider">
-                            <div class="slider__main">
-                                <button
-                                    class="slider__arrow slider__arrow--prev"
-                                    aria-label="Previous image">
-                                    <span class="slider__arrow-icon"></span>
-                                </button>
-                                <div class="slider__viewport">
-                                    <div class="slider__track">
-                                        <div class="slider__slide">
-                                            <img
-                                                src="assets/images/placeholder-1.jpg"
-                                                alt="Product image 1"
-                                                class="slider__image"
-                                                loading="lazy">
+                    <div class="product__grid">
+                        <div class="product__image-section">
+                            <div class="slider">
+                                <!-- Row 1: Main Selected Image -->
+                                <div class="slider__main-row">
+                                    <div class="slider__main">
+                                        <button
+                                            class="slider__arrow slider__arrow--prev"
+                                            aria-label="Previous image">
+                                            <span
+                                                class="slider__arrow-icon"></span>
+                                        </button>
+                                        <div class="slider__viewport">
+                                            <div class="slider__track">
+                                                <div class="slider__slide">
+                                                    <img
+                                                        src="assets/images/gallary/arose.jpg"
+                                                        alt="Arose perfume"
+                                                        class="slider__image"
+                                                        loading="lazy">
+                                                </div>
+                                                <div class="slider__slide">
+                                                    <img
+                                                        src="assets/images/gallary/bella.jpg"
+                                                        alt="Bella perfume"
+                                                        class="slider__image"
+                                                        loading="lazy">
+                                                </div>
+                                                <div class="slider__slide">
+                                                    <img
+                                                        src="assets/images/gallary/daisies.jpg"
+                                                        alt="Daisies perfume"
+                                                        class="slider__image"
+                                                        loading="lazy">
+                                                </div>
+                                                <div class="slider__slide">
+                                                    <img
+                                                        src="assets/images/gallary/a206a3992f8dd3b83e58b96d68af3ba37d448aff.png"
+                                                        alt="Perfume"
+                                                        class="slider__image"
+                                                        loading="lazy">
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="slider__slide">
-                                            <img
-                                                src="assets/images/placeholder-2.jpg"
-                                                alt="Product image 2"
-                                                class="slider__image"
-                                                loading="lazy">
-                                        </div>
-                                        <div class="slider__slide">
-                                            <img
-                                                src="assets/images/placeholder-3.jpg"
-                                                alt="Product image 3"
-                                                class="slider__image"
-                                                loading="lazy">
-                                        </div>
+                                        <button
+                                            class="slider__arrow slider__arrow--next"
+                                            aria-label="Next image">
+                                            <span
+                                                class="slider__arrow-icon"></span>
+                                        </button>
                                     </div>
                                 </div>
-                                <button
-                                    class="slider__arrow slider__arrow--next"
-                                    aria-label="Next image">
-                                    <span class="slider__arrow-icon"></span>
-                                </button>
-                            </div>
-                            <div class="slider__dots">
-                                <button class="slider__dot slider__dot--active"
-                                    aria-label="Go to slide 1"></button>
-                                <button class="slider__dot"
-                                    aria-label="Go to slide 2"></button>
-                                <button class="slider__dot"
-                                    aria-label="Go to slide 3"></button>
-                            </div>
-                            <div class="slider__thumbnails">
-                                <button
-                                    class="slider__thumbnail slider__thumbnail--active">
-                                    <img src="assets/images/thumbnail-1.jpg"
-                                        alt="Thumbnail 1"
-                                        class="slider__thumbnail-image"
-                                        loading="lazy">
-                                </button>
-                                <button class="slider__thumbnail">
-                                    <img src="assets/images/thumbnail-2.jpg"
-                                        alt="Thumbnail 2"
-                                        class="slider__thumbnail-image"
-                                        loading="lazy">
-                                </button>
-                                <button class="slider__thumbnail">
-                                    <img src="assets/images/thumbnail-3.jpg"
-                                        alt="Thumbnail 3"
-                                        class="slider__thumbnail-image"
-                                        loading="lazy">
-                                </button>
+                                <!-- Row 2: Thumbnail Grid (2 rows x 4 columns) -->
+                                <div class="slider__thumbnails-grid">
+                                    <button
+                                        class="slider__thumbnail slider__thumbnail--active">
+                                        <img
+                                            src="assets/images/gallary/arose.jpg"
+                                            alt="Arose perfume thumbnail"
+                                            class="slider__thumbnail-image"
+                                            loading="lazy">
+                                    </button>
+                                    <button class="slider__thumbnail">
+                                        <img
+                                            src="assets/images/gallary/bella.jpg"
+                                            alt="Bella perfume thumbnail"
+                                            class="slider__thumbnail-image"
+                                            loading="lazy">
+                                    </button>
+                                    <button class="slider__thumbnail">
+                                        <img
+                                            src="assets/images/gallary/daisies.jpg"
+                                            alt="Daisies perfume thumbnail"
+                                            class="slider__thumbnail-image"
+                                            loading="lazy">
+                                    </button>
+                                    <button class="slider__thumbnail">
+                                        <img
+                                            src="assets/images/gallary/a206a3992f8dd3b83e58b96d68af3ba37d448aff.png"
+                                            alt="Perfume thumbnail"
+                                            class="slider__thumbnail-image"
+                                            loading="lazy">
+                                    </button>
+                                    <button class="slider__thumbnail">
+                                        <img
+                                            src="assets/images/gallary/arose.jpg"
+                                            alt="Arose perfume thumbnail"
+                                            class="slider__thumbnail-image"
+                                            loading="lazy">
+                                    </button>
+                                    <button class="slider__thumbnail">
+                                        <img
+                                            src="assets/images/gallary/bella.jpg"
+                                            alt="Bella perfume thumbnail"
+                                            class="slider__thumbnail-image"
+                                            loading="lazy">
+                                    </button>
+                                    <button class="slider__thumbnail">
+                                        <img
+                                            src="assets/images/gallary/daisies.jpg"
+                                            alt="Daisies perfume thumbnail"
+                                            class="slider__thumbnail-image"
+                                            loading="lazy">
+                                    </button>
+                                    <button class="slider__thumbnail">
+                                        <img
+                                            src="assets/images/gallary/a206a3992f8dd3b83e58b96d68af3ba37d448aff.png"
+                                            alt="Perfume thumbnail"
+                                            class="slider__thumbnail-image"
+                                            loading="lazy">
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="product__info-section">
-                        <h1 class="product__title">Product Title</h1>
-                        <p class="product__description">Product description goes
-                            here.</p>
+                        <div class="product__info-section">
+                            <h1 class="product__title">Product Title</h1>
+                            <p class="product__description">Product description
+                                goes
+                                here.</p>
 
-                        <!-- Subscription Options -->
-                        <div class="subscription">
-                            <h2 class="subscription__title">Choose Your
-                                Plan</h2>
-                            <div class="subscription__options">
-                                <label class="subscription__option">
-                                    <input type="radio" name="subscription"
-                                        value="monthly"
-                                        class="subscription__radio" checked>
+                            <!-- Subscription Options -->
+                            <div class="subscription">
+                                <h2 class="subscription__title">Choose Your
+                                    Plan</h2>
+                                <div class="subscription__options">
+                                    <label class="subscription__option">
+                                        <input type="radio" name="subscription"
+                                            value="monthly"
+                                            class="subscription__radio" checked>
+                                        <span
+                                            class="subscription__label">Monthly</span>
+                                    </label>
+                                    <label class="subscription__option">
+                                        <input type="radio" name="subscription"
+                                            value="quarterly"
+                                            class="subscription__radio">
+                                        <span
+                                            class="subscription__label">Quarterly</span>
+                                    </label>
+                                    <label class="subscription__option">
+                                        <input type="radio" name="subscription"
+                                            value="yearly"
+                                            class="subscription__radio">
+                                        <span
+                                            class="subscription__label">Yearly</span>
+                                    </label>
+                                </div>
+                                <button class="subscription__expand"
+                                    aria-label="Expand subscription options">
+                                    <span class="subscription__expand-text">More
+                                        Options</span>
                                     <span
-                                        class="subscription__label">Monthly</span>
-                                </label>
-                                <label class="subscription__option">
-                                    <input type="radio" name="subscription"
-                                        value="quarterly"
-                                        class="subscription__radio">
-                                    <span
-                                        class="subscription__label">Quarterly</span>
-                                </label>
-                                <label class="subscription__option">
-                                    <input type="radio" name="subscription"
-                                        value="yearly"
-                                        class="subscription__radio">
-                                    <span
-                                        class="subscription__label">Yearly</span>
-                                </label>
+                                        class="subscription__expand-icon"></span>
+                                </button>
                             </div>
-                            <button class="subscription__expand"
-                                aria-label="Expand subscription options">
-                                <span class="subscription__expand-text">More
-                                    Options</span>
-                                <span class="subscription__expand-icon"></span>
-                            </button>
-                        </div>
 
-                        <!-- Add to Cart -->
-                        <a href="#" class="btn btn--primary btn--cart"
-                            id="add-to-cart-btn">Add to Cart</a>
+                            <!-- Add to Cart -->
+                            <a href="#" class="btn btn--primary btn--cart"
+                                id="add-to-cart-btn">Add to Cart</a>
+                        </div>
                     </div>
                 </div>
             </section>
