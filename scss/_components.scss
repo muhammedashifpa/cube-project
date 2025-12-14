@@ -10,6 +10,12 @@
 
 .btn {
   /* Base button styles */
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  font-family: var(--font-family-primary); // Inter
 }
 
 .btn--primary {
@@ -22,6 +28,26 @@
 
 .btn--cart {
   /* Cart button specific styles */
+  background: linear-gradient(180deg, #032e15 0%, #016630 100%);
+  font-family: var(--font-family-primary); // Inter
+  font-weight: var(--font-weight-medium); // 500
+  font-size: 1.1375rem; // 18.2px
+  line-height: 1.75rem; // 28px
+  letter-spacing: 0;
+  color: #ffffff;
+  padding: 0.75rem; // 12px
+  width: 100%;
+  border-radius: var(--radius-full); // Pill shape (fully rounded)
+  text-align: center;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:focus {
+    outline: var(--outline-width) solid var(--color-primary);
+    outline-offset: var(--outline-offset);
+  }
 }
 
 /* ============================================

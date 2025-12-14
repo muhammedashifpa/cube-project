@@ -9,6 +9,7 @@ import { initAccordion } from "./accordion.js";
 import { initCounter } from "./counter.js";
 import { initMenu } from "./menu.js";
 import { initSubscription } from "./subscription.js";
+import { initCart } from "./cart.js";
 
 /**
  * Initialize all modules when DOM is ready
@@ -28,6 +29,9 @@ function init() {
 
   // Initialize subscription expand/collapse
   initSubscription();
+
+  // Initialize cart functionality
+  initCart();
 }
 
 // Wait for DOM to be fully loaded
