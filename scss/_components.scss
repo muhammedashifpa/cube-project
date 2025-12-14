@@ -51,6 +51,14 @@
 .btn--hero {
   align-self: flex-start;
   margin-top: var(--spacing-md);
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-medium); // 500
+  font-size: 1.1375rem; // 18.2px
+  line-height: 1.5rem; // 24px
+  letter-spacing: 0;
+  width: 11.625rem; // 186px
+  padding: var(--spacing-md); // 16px
+  border-radius: var(--radius-full); // Pill type
 }
 
 .btn--secondary {
@@ -1638,7 +1646,7 @@
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-hero);
   line-height: var(--line-height-relaxed);
-  letter-spacing: -0.033125rem; // -1.33px
+  letter-spacing: -0.083125rem; // -1.33px (specific value, not in variables)
   color: var(--color-text);
   margin: 0;
 }
@@ -1666,6 +1674,8 @@
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-stat);
   line-height: var(--line-height-none);
+  letter-spacing: 0;
+  vertical-align: middle;
   background: var(--gradient-primary-transparent);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
