@@ -10,6 +10,7 @@ import { initCounter } from "./counter.js";
 import { initMenu } from "./menu.js";
 import { initSubscription } from "./subscription.js";
 import { initCart } from "./cart.js";
+import { initHeader } from "./header.js";
 
 /**
  * Initialize all modules when DOM is ready
@@ -32,6 +33,9 @@ function init() {
 
   // Initialize cart functionality
   initCart();
+
+  // Initialize header scroll behavior
+  initHeader();
 }
 
 // Wait for DOM to be fully loaded
