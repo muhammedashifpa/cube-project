@@ -57,8 +57,20 @@
                                         <button
                                             class="slider__arrow slider__arrow--prev"
                                             aria-label="Previous image">
-                                            <span
-                                                class="slider__arrow-icon"></span>
+                                            <svg class="slider__arrow-icon"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="39" height="39"
+                                                viewBox="0 0 39 39" fill="none">
+                                                <rect x="0.405232" y="0.405232"
+                                                    width="38.0919"
+                                                    height="38.0919"
+                                                    rx="19.0459"
+                                                    stroke="#032E15"
+                                                    stroke-width="0.810465" />
+                                                <path
+                                                    d="M25.9362 18.641H16.0728L20.6033 14.1105L19.4525 12.9678L12.9688 19.4515L19.4525 25.9352L20.5952 24.7925L16.0728 20.262H25.9362V18.641Z"
+                                                    fill="#032E15" />
+                                            </svg>
                                         </button>
                                         <div class="slider__viewport">
                                             <div class="slider__track">
@@ -95,9 +107,54 @@
                                         <button
                                             class="slider__arrow slider__arrow--next"
                                             aria-label="Next image">
-                                            <span
-                                                class="slider__arrow-icon"></span>
+                                            <svg class="slider__arrow-icon"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="39" height="39"
+                                                viewBox="0 0 39 39" fill="none">
+                                                <rect x="-0.405232" y="0.405232"
+                                                    width="38.0919"
+                                                    height="38.0919"
+                                                    rx="19.0459"
+                                                    transform="matrix(-1 0 0 1 38.0919 0)"
+                                                    stroke="#032E15"
+                                                    stroke-width="0.810465" />
+                                                <path
+                                                    d="M12.9701 18.641H22.8334L18.3029 14.1105L19.4538 12.9678L25.9375 19.4515L19.4538 25.9352L18.311 24.7925L22.8334 20.262H12.9701V18.641Z"
+                                                    fill="#032E15" />
+                                            </svg>
                                         </button>
+                                        <!-- Dots Navigation -->
+                                        <div class="slider__dots" role="tablist"
+                                            aria-label="Slider navigation">
+                                            <button
+                                                class="slider__dot slider__dot--active"
+                                                role="tab"
+                                                aria-label="Slide 1"
+                                                aria-selected="true"
+                                                tabindex="0">
+                                            </button>
+                                            <button
+                                                class="slider__dot"
+                                                role="tab"
+                                                aria-label="Slide 2"
+                                                aria-selected="false"
+                                                tabindex="-1">
+                                            </button>
+                                            <button
+                                                class="slider__dot"
+                                                role="tab"
+                                                aria-label="Slide 3"
+                                                aria-selected="false"
+                                                tabindex="-1">
+                                            </button>
+                                            <button
+                                                class="slider__dot"
+                                                role="tab"
+                                                aria-label="Slide 4"
+                                                aria-selected="false"
+                                                tabindex="-1">
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- Row 2: Thumbnail Grid (2 rows x 4 columns) -->
@@ -163,46 +220,72 @@
                             </div>
                         </div>
                         <div class="product__info-section">
-                            <h1 class="product__title">Product Title</h1>
-                            <p class="product__description">Product description
-                                goes
-                                here.</p>
-
-                            <!-- Subscription Options -->
-                            <div class="subscription">
-                                <h2 class="subscription__title">Choose Your
-                                    Plan</h2>
-                                <div class="subscription__options">
-                                    <label class="subscription__option">
-                                        <input type="radio" name="subscription"
-                                            value="monthly"
-                                            class="subscription__radio" checked>
-                                        <span
-                                            class="subscription__label">Monthly</span>
-                                    </label>
-                                    <label class="subscription__option">
-                                        <input type="radio" name="subscription"
-                                            value="quarterly"
-                                            class="subscription__radio">
-                                        <span
-                                            class="subscription__label">Quarterly</span>
-                                    </label>
-                                    <label class="subscription__option">
-                                        <input type="radio" name="subscription"
-                                            value="yearly"
-                                            class="subscription__radio">
-                                        <span
-                                            class="subscription__label">Yearly</span>
-                                    </label>
+                            <h1 class="product__brand">GTG Perfumes</h1>
+                            <div class="product__rating">
+                                <div class="product__stars">
+                                    <svg class="product__star"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="13" height="12"
+                                        viewBox="0 0 13 12" fill="none">
+                                        <path
+                                            d="M6.23277 0L7.70403 4.52807H12.4651L8.61331 7.32657L10.0846 11.8546L6.23277 9.05614L2.38096 11.8546L3.85222 7.32657L0.000418186 4.52807H4.76151L6.23277 0Z"
+                                            fill="#00C950" />
+                                    </svg>
+                                    <svg class="product__star"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="13" height="12"
+                                        viewBox="0 0 13 12" fill="none">
+                                        <path
+                                            d="M6.23277 0L7.70403 4.52807H12.4651L8.61331 7.32657L10.0846 11.8546L6.23277 9.05614L2.38096 11.8546L3.85222 7.32657L0.000418186 4.52807H4.76151L6.23277 0Z"
+                                            fill="#00C950" />
+                                    </svg>
+                                    <svg class="product__star"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="13" height="12"
+                                        viewBox="0 0 13 12" fill="none">
+                                        <path
+                                            d="M6.23277 0L7.70403 4.52807H12.4651L8.61331 7.32657L10.0846 11.8546L6.23277 9.05614L2.38096 11.8546L3.85222 7.32657L0.000418186 4.52807H4.76151L6.23277 0Z"
+                                            fill="#00C950" />
+                                    </svg>
+                                    <svg class="product__star"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="13" height="12"
+                                        viewBox="0 0 13 12" fill="none">
+                                        <path
+                                            d="M6.23277 0L7.70403 4.52807H12.4651L8.61331 7.32657L10.0846 11.8546L6.23277 9.05614L2.38096 11.8546L3.85222 7.32657L0.000418186 4.52807H4.76151L6.23277 0Z"
+                                            fill="#00C950" />
+                                    </svg>
+                                    <svg
+                                        class="product__star product__star--partial"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="13" height="12"
+                                        viewBox="0 0 13 12" fill="none">
+                                        <defs>
+                                            <clippath id="star-clip-70">
+                                                <rect x="0" y="0" width="9.1"
+                                                    height="12" />
+                                            </clippath>
+                                        </defs>
+                                        <!-- Full star outline (unfilled) -->
+                                        <path
+                                            d="M6.23277 0L7.70403 4.52807H12.4651L8.61331 7.32657L10.0846 11.8546L6.23277 9.05614L2.38096 11.8546L3.85222 7.32657L0.000418186 4.52807H4.76151L6.23277 0Z"
+                                            fill="none" stroke="#E5E5E5"
+                                            stroke-width="0.5" />
+                                        <!-- 70% filled portion (clipped) -->
+                                        <path
+                                            d="M6.23277 0L7.70403 4.52807H12.4651L8.61331 7.32657L10.0846 11.8546L6.23277 9.05614L2.38096 11.8546L3.85222 7.32657L0.000418186 4.52807H4.76151L6.23277 0Z"
+                                            fill="#00C950"
+                                            clip-path="url(#star-clip-70)" />
+                                    </svg>
                                 </div>
-                                <button class="subscription__expand"
-                                    aria-label="Expand subscription options">
-                                    <span class="subscription__expand-text">More
-                                        Options</span>
-                                    <span
-                                        class="subscription__expand-icon"></span>
-                                </button>
+                                <span class="product__rating-text">4.7 (999+
+                                    reviews)</span>
                             </div>
+                            <p class="product__description">Experience the
+                                timeless allure backed by modern artistry,
+                                captured in every bottle of our fragrance.
+                                Crafted for those who seek to elevate their
+                                essence with purpose and sophistication.</p>
 
                             <!-- Add to Cart -->
                             <a href="#" class="btn btn--primary btn--cart"

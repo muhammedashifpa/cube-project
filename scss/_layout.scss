@@ -30,7 +30,7 @@
    ============================================ */
 
 .product {
-  padding: var(--spacing-3xl) 4rem; // 64px horizontal padding
+  padding: var(--spacing-3xl) 1rem; // 64px vertical, 16px horizontal on mobile
 }
 
 .product__container {
@@ -57,7 +57,7 @@
 
 @media (min-width: 768px) {
   .product {
-    padding: var(--spacing-3xl) 4rem; // 64px horizontal padding
+    padding: var(--spacing-3xl) 4rem; // 64px horizontal padding on tablet+
   }
 
   .product__grid {
@@ -86,7 +86,7 @@
    ============================================ */
 
 .accordion-section {
-  padding: var(--spacing-3xl) 4rem; // 64px horizontal padding
+  padding: var(--spacing-3xl) 1rem; // 64px vertical, 16px horizontal on mobile
 }
 
 .accordion-section__container {
@@ -115,7 +115,7 @@
 
 @media (min-width: 768px) {
   .accordion-section {
-    padding: var(--spacing-3xl) 4rem; // 64px horizontal padding
+    padding: var(--spacing-3xl) 4rem; // 64px horizontal padding on tablet+
   }
 
   .accordion-section__grid {
@@ -145,8 +145,14 @@
 
 .statistics-section {
   background: var(--gradient-primary);
-  padding: var(--spacing-3xl) 4rem; // 64px horizontal padding
+  padding: var(--spacing-3xl) 1rem; // 64px vertical, 16px horizontal on mobile
   margin: 0; // No margin
+}
+
+@media (min-width: 768px) {
+  .statistics-section {
+    padding: var(--spacing-3xl) 4rem; // 64px horizontal padding on tablet+
+  }
 }
 
 .statistics-section__container {
@@ -165,7 +171,13 @@
    ============================================ */
 
 .table-section {
-  padding: var(--spacing-3xl) 4rem; // 64px horizontal padding
+  padding: var(--spacing-3xl) 1rem; // 64px vertical, 16px horizontal on mobile
+}
+
+@media (min-width: 768px) {
+  .table-section {
+    padding: var(--spacing-3xl) 4rem; // 64px horizontal padding on tablet+
+  }
 }
 
 .table-section__container {
@@ -179,8 +191,14 @@
 
 .footer {
   background-color: var(--color-primary);
-  padding: var(--spacing-2xl) 4rem; // 64px horizontal padding
+  padding: var(--spacing-2xl) 1rem; // 48px vertical, 16px horizontal on mobile
   color: var(--color-footer-text);
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding: var(--spacing-2xl) 4rem; // 48px vertical, 64px horizontal on tablet+
+  }
 }
 
 .footer__container {

@@ -42,17 +42,23 @@
 .slider__main {
   /* Main slider area */
   position: relative;
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-md);
+  width: 100%;
 }
 
 .slider__viewport {
   /* Slider viewport */
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  border-radius: 0.9475rem; // 15.17px to match image
 }
 
 .slider__track {
   /* Slider track */
+  display: flex;
+  transition: transform var(--transition-normal);
+  will-change: transform;
+  width: 100%;
 }
 
 .slider__slide {
@@ -60,44 +66,104 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  flex-shrink: 0;
+  width: 100%;
+  min-width: 100%;
 }
 
 .slider__image {
-  width: 610px;
-  max-width: 100%;
-  height: 672.9945678710938px; // Approximately 673px
+  width: 100%;
+  height: 471.09619730976566px; // 70% of 673px on all screen sizes
   object-fit: cover;
   display: block;
-  border-bottom-right-radius: 15.17px;
-  border-bottom-left-radius: 15.17px;
+  border-radius: 0.9475rem; // 15.17px on all corners
 }
 
 .slider__arrow {
-  /* Slider navigation arrow */
+  /* Slider navigation arrow - floating buttons inside image */
+  background: transparent;
+  border: none;
+  padding: 0;
+  width: 39px;
+  height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  position: absolute;
+  bottom: 1.125rem; // 18px to match viewport padding
+  z-index: 2;
+
+  &:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+
+  &:focus {
+    outline: var(--outline-width) solid var(--color-primary);
+    outline-offset: var(--outline-offset);
+  }
 }
 
 .slider__arrow--prev {
   /* Previous arrow */
+  left: 1.75rem; // 28px to match viewport padding
 }
 
 .slider__arrow--next {
   /* Next arrow */
+  right: 1.75rem; // 28px to match viewport padding
 }
 
 .slider__arrow-icon {
-  /* Arrow icon */
+  /* Arrow icon SVG */
+  display: block;
+  width: 39px;
+  height: 39px;
+  pointer-events: none;
 }
 
 .slider__dots {
   /* Dots container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-sm); // 8px gap between dots
+  position: absolute;
+  bottom: 1.125rem; // 18px to match arrow buttons
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
 }
 
 .slider__dot {
   /* Individual dot */
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1.5px solid var(--color-primary); // #032E15
+  padding: 0;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  flex-shrink: 0;
+
+  &:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+
+  &:focus {
+    outline: var(--outline-width) solid var(--color-primary);
+    outline-offset: var(--outline-offset);
+  }
 }
 
 .slider__dot--active {
   /* Active dot state */
+  background: var(--color-primary); // #032E15 filled
+  border-color: var(--color-primary);
 }
 
 .slider__thumbnails-grid {
@@ -147,44 +213,62 @@
 }
 
 /* ============================================
-   SUBSCRIPTION COMPONENT
+   PRODUCT INFO COMPONENT
    ============================================ */
 
-.subscription {
-  /* Subscription container */
+.product__brand {
+  font-family: var(--font-family-primary); // Inter
+  font-weight: var(--font-weight-semibold); // 600
+  font-size: 2.25rem; // 36px
+  line-height: 1; // 100%
+  letter-spacing: 0;
+  color: var(--color-text); // #032E15
+  margin: 0 0 0.5rem 0; // 8px bottom margin
 }
 
-.subscription__title {
-  /* Subscription title */
+.product__rating {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem; // 10px gap between stars and text
+  margin-bottom: 1.25rem; // 20px bottom margin
 }
 
-.subscription__options {
-  /* Subscription options container */
+.product__stars {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem; // 4px gap between stars
 }
 
-.subscription__option {
-  /* Individual subscription option */
+.product__star {
+  width: 13px;
+  height: 12px;
+  display: block;
+  flex-shrink: 0;
 }
 
-.subscription__radio {
-  /* Radio input */
+.product__rating-text {
+  font-family: var(--font-family-primary); // Inter
+  font-weight: var(--font-weight-light); // 300
+  font-size: 0.8125rem; // 13px
+  line-height: 1; // 100%
+  letter-spacing: 0;
+  color: var(--color-text); // #032E15
 }
 
-.subscription__label {
-  /* Radio label */
+.product__description {
+  font-family: var(--font-family-primary); // Inter
+  font-weight: var(--font-weight-light); // 300
+  font-size: var(--font-size-body); // 16.18px (1.01125rem)
+  line-height: 1; // 100%
+  letter-spacing: 0;
+  text-align: justify;
+  color: var(--color-text); // #032E15
+  margin: 0 0 1.875rem 0; // 30px bottom margin
 }
 
-.subscription__expand {
-  /* Expand button */
-}
-
-.subscription__expand-text {
-  /* Expand button text */
-}
-
-.subscription__expand-icon {
-  /* Expand icon */
-}
+/* ============================================
+   SUBSCRIPTION COMPONENT
+   ============================================ */
 
 /* ============================================
    ACCORDION COMPONENT

@@ -39,16 +39,21 @@ export function initSlider() {
     const translateX = -index * 100;
     track.style.transform = `translateX(${translateX}%)`;
 
-    // Update dots
-    dots.forEach((dot, i) => {
-      dot.classList.toggle("slider__dot--active", i === currentSlide);
-    });
+    // Update dots (if they exist)
+    if (dots.length > 0) {
+      dots.forEach((dot, i) => {
+        const isActive = i === currentSlide;
+        dot.classList.toggle("slider__dot--active", isActive);
+        dot.setAttribute("aria-selected", isActive);
+        dot.setAttribute("tabindex", isActive ? "0" : "-1");
+      });
+    }
 
-    // Update thumbnails - only highlight the first thumbnail that matches the current slide
+    // Update thumbnails - highlight only the first thumbnail that matches the current slide
     thumbnails.forEach((thumbnail, i) => {
       // Map thumbnail index to slide index (0-3 map to slide 0, 4-7 map to slide 1, etc.)
       const thumbnailSlideIndex = i % totalSlides;
-      // Only highlight if it matches current slide AND it's the first matching thumbnail
+      // Only highlight the first matching thumbnail (0-3 range)
       const isFirstMatch =
         thumbnailSlideIndex === currentSlide && i < totalSlides;
       thumbnail.classList.toggle("slider__thumbnail--active", isFirstMatch);

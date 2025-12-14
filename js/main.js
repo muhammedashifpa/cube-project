@@ -5,7 +5,6 @@
  */
 
 import { initSlider } from './slider.js';
-import { initCart } from './cart.js';
 import { initAccordion } from './accordion.js';
 import { initCounter } from './counter.js';
 import { initMenu } from './menu.js';
@@ -16,9 +15,6 @@ import { initMenu } from './menu.js';
 function init() {
     // Initialize slider functionality
     initSlider();
-    
-    // Initialize cart functionality (subscription updates)
-    initCart();
     
     // Initialize accordion functionality
     initAccordion();
