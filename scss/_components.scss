@@ -42,6 +42,7 @@
 
 .btn--header {
   display: none; // Hidden on mobile
+  border-radius: var(--radius-full); // Pill type
 
   @media (min-width: 768px) {
     display: inline-block;
@@ -1646,7 +1647,7 @@
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-hero);
   line-height: var(--line-height-relaxed);
-  letter-spacing: -0.083125rem; // -1.33px (specific value, not in variables)
+  letter-spacing: -0.083125rem; // -1.33px
   color: var(--color-text);
   margin: 0;
 }
