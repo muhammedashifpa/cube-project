@@ -282,7 +282,7 @@
   padding: 0;
   border: 1.01px solid #b8b8b8;
   border-radius: var(--radius-md); // 8px
-  cursor: pointer;
+  cursor: default; // Default cursor for option container
   transition: var(--transition-fast);
   background: var(--color-bg); // #FFFFFF
   overflow: hidden; // Ensure badge corners are rounded
@@ -290,6 +290,10 @@
   &:hover {
     border-color: var(--color-primary); // #032E15
   }
+}
+
+.product__subscription-option-content {
+  cursor: pointer; // Pointer cursor only on the clickable option content
 }
 
 .product__subscription-badge {
@@ -318,6 +322,7 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height var(--transition-normal);
+  cursor: default; // Default cursor for content area
 }
 
 .product__subscription-content-wrapper {
@@ -332,7 +337,7 @@
 
 .product__subscription-content-title {
   font-family: var(--font-family-primary); // Inter
-  font-weight: var(--font-weight-bold); // 700
+  font-weight: var(--font-weight-light); // 300
   font-size: var(--font-size-lg); // 18px
   line-height: 1.5;
   color: var(--color-text); // #032E15
@@ -489,6 +494,157 @@
     object-fit: contain;
     display: block;
   }
+}
+
+/* ============================================
+   WHAT'S INCLUDED SECTION
+   ============================================ */
+
+.product__subscription-included {
+  margin-top: var(--spacing-lg); // 24px
+}
+
+.product__subscription-included-title {
+  font-family: var(--font-family-primary); // Inter
+  font-weight: var(--font-weight-light); // 300
+  font-size: 1.01125rem; // 16.18px
+  line-height: 1; // 100%
+  letter-spacing: 0;
+  text-align: justify;
+  color: var(--color-text); // #032E15
+  margin: 0 0 var(--spacing-md) 0; // 0 0 16px 0
+}
+
+.product__subscription-included-boxes {
+  display: flex;
+  gap: var(--spacing-md); // 16px
+}
+
+.product__subscription-included-box {
+  border: 1.01px solid #919798;
+  border-radius: 0.379375rem; // 6.07px
+  padding: 0.5rem 0.75rem; // 8px vertical, 12px horizontal
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm); // 8px
+  align-items: center; // Center content horizontally
+}
+
+.product__subscription-included-box--every-30 {
+  width: 10.25rem; // 164px
+  height: 13.75rem; // 220px
+  flex-shrink: 0;
+}
+
+.product__subscription-included-box--one-time {
+  flex-grow: 1;
+}
+
+.product__subscription-included-label {
+  font-family: var(--font-family-primary); // Inter
+  font-weight: var(--font-weight-light); // 300
+  font-size: var(--font-size-body); // 16px
+  color: #666666; // Gray color
+  line-height: 1.5;
+}
+
+.product__subscription-included-label-free {
+  font-weight: var(--font-weight-bold); // 700
+  color: var(--color-primary); // #032E15 (green)
+}
+
+.product__subscription-included-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.product__subscription-included-image--single {
+  width: 5.25rem; // 84px
+  height: 9rem; // 144px
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto; // Center the image container horizontally
+
+  img {
+    width: 5.25rem; // 84px
+    height: 9rem; // 144px
+    object-fit: contain;
+    display: block;
+  }
+}
+
+.product__subscription-included-images {
+  display: flex;
+  gap: var(--spacing-lg); // 24px spacing between images
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.product__subscription-included-image--multiple {
+  flex: 1;
+  width: 3.375rem; // 54px
+  height: 5.875rem; // 94px
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 3.375rem; // 54px
+    height: 5.875rem; // 94px
+    object-fit: contain;
+    display: block;
+  }
+}
+
+/* ============================================
+   BENEFITS LIST SECTION
+   ============================================ */
+
+.product__subscription-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 0 0; // 20px top margin
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; // 8px between items
+}
+
+.product__subscription-benefit {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem; // 6px after icon
+}
+
+.product__subscription-benefit-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.product__subscription-benefit-text {
+  font-family: var(--font-family-primary); // Inter
+  font-weight: var(--font-weight-light); // 300
+  font-size: 0.875rem; // 14px
+  line-height: 1.3125rem; // 21px
+  letter-spacing: 0.05625rem; // 0.9px
+  text-align: justify;
+  text-transform: capitalize;
+  color: var(--color-text); // #032E15
+  flex: 1;
+
+  strong {
+    font-weight: var(--font-weight-bold); // 700
+  }
+}
+
+.product__subscription-benefit-text--bold {
+  font-weight: var(--font-weight-bold); // 700
+  color: var(--color-text); // #032E15 (dark green)
 }
 
 .product__subscription-radio {
