@@ -55,15 +55,15 @@
 
 .header__logo {
   font-family: var(--font-family-primary);
-  font-weight: 800; // Extra Bold
-  font-size: 1.875rem; // 30px
-  line-height: var(--line-height-body);
+  font-weight: 800; // Extra Bold (not in variables, specific value)
+  font-size: 1.875rem; // 30px (not in variables, specific value)
+  line-height: var(--line-height-body); // 150%
   letter-spacing: var(--letter-spacing-normal);
   background: var(--gradient-primary-transparent);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  color: transparent;
+  color: transparent; // Gradient applied as text color
   text-decoration: none;
   flex-shrink: 0;
   transition: var(--transition-fast);
