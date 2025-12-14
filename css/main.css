@@ -877,6 +877,270 @@ p {
   margin: 0 0 1.875rem 0;
 }
 
+/* Subscription Options */
+.product__subscription-options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.product__subscription-option {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  padding: 0;
+  border: 1.01px solid #b8b8b8;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  background: var(--color-bg);
+  overflow: hidden;
+}
+.product__subscription-option:hover {
+  border-color: var(--color-primary);
+}
+
+.product__subscription-badge {
+  display: block;
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: linear-gradient(270deg, #032e15 0%, #008236 51.92%, #00c950 100%);
+  color: var(--color-bg);
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: 1.264375rem;
+  line-height: 1.516875rem;
+  letter-spacing: 0;
+  text-align: center;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.product__subscription-option-content {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: 0.875rem 1.375rem;
+}
+
+.product__subscription-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-normal);
+}
+
+.product__subscription-content-wrapper {
+  border-top: 1px solid #b8b8b8;
+  margin-left: 3.4375rem;
+  margin-right: 2.8125rem;
+}
+
+.product__subscription-content-inner {
+  padding: 1.125rem 0 1.625rem;
+}
+
+.product__subscription-content-title {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-lg);
+  line-height: 1.5;
+  color: var(--color-text);
+  margin: 0 0 var(--spacing-sm) 0;
+}
+
+.product__subscription-fragrances {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.product__subscription-fragrance {
+  position: relative;
+  width: 8rem;
+  flex-shrink: 0;
+}
+
+.product__subscription-fragrance-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  background: #f9f9f9;
+  position: relative;
+  height: 9.0625rem;
+  box-sizing: border-box;
+}
+
+.product__subscription-fragrance-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  width: 100%;
+}
+
+.product__fragrance-radio {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 0.81px solid #00c950;
+  border-radius: 50%;
+  background: var(--color-bg);
+  position: relative;
+  transition: var(--transition-fast);
+}
+.product__fragrance-radio:checked {
+  border: none;
+  background: linear-gradient(180deg, rgba(3, 46, 21, 0.6) 0%, rgba(1, 102, 48, 0.6) 100%);
+}
+.product__fragrance-radio:checked::before {
+  content: "";
+  position: absolute;
+  top: -0.81px;
+  left: -0.81px;
+  width: calc(100% + 1.62px);
+  height: calc(100% + 1.62px);
+  border-radius: 50%;
+  background: linear-gradient(180deg, rgba(3, 46, 21, 0.6) 0%, rgba(1, 102, 48, 0.6) 100%);
+  -webkit-mask: radial-gradient(circle, transparent calc(50% - 0.81px), black calc(50% - 0.81px), black 50%, transparent 50%);
+  mask: radial-gradient(circle, transparent calc(50% - 0.81px), black calc(50% - 0.81px), black 50%, transparent 50%);
+  z-index: -1;
+}
+
+.product__subscription-fragrance-name {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-light);
+  font-size: 0.825rem;
+  letter-spacing: 0;
+  text-align: justify;
+  color: #919798;
+}
+
+.product__subscription-fragrance:has(.product__fragrance-radio:checked) .product__subscription-fragrance-name {
+  background: linear-gradient(180deg, rgba(3, 46, 21, 0.6) 0%, rgba(1, 102, 48, 0.6) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.product__subscription-fragrance-badge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateY(-50%);
+  padding: 0.25rem 0.5rem;
+  background: linear-gradient(180deg, #032e15 0%, #016630 100%);
+  color: var(--color-bg);
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: 0.460625rem;
+  line-height: 1;
+  letter-spacing: 0;
+  border-top-left-radius: 0.3125rem;
+  border-bottom-right-radius: 0.3125rem;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  white-space: nowrap;
+}
+
+.product__subscription-fragrance-image {
+  width: 100%;
+  height: 150px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.product__subscription-fragrance-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.product__subscription-radio {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 0.81px solid #00c950;
+  border-radius: 50%;
+  background: var(--color-bg);
+  position: relative;
+  transition: var(--transition-fast);
+}
+.product__subscription-radio:checked {
+  border: none;
+  background: linear-gradient(180deg, rgba(3, 46, 21, 0.6) 0%, rgba(1, 102, 48, 0.6) 100%);
+}
+.product__subscription-radio:checked::before {
+  content: "";
+  position: absolute;
+  top: -0.81px;
+  left: -0.81px;
+  width: calc(100% + 1.62px);
+  height: calc(100% + 1.62px);
+  border-radius: 50%;
+  background: linear-gradient(180deg, rgba(3, 46, 21, 0.6) 0%, rgba(1, 102, 48, 0.6) 100%);
+  -webkit-mask: radial-gradient(circle, transparent calc(50% - 0.81px), black calc(50% - 0.81px), black 50%, transparent 50%);
+  mask: radial-gradient(circle, transparent calc(50% - 0.81px), black calc(50% - 0.81px), black 50%, transparent 50%);
+  z-index: -1;
+}
+
+.product__subscription-label {
+  flex: 1;
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-light);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  letter-spacing: 0.05625rem;
+  color: var(--color-text);
+  vertical-align: middle;
+}
+
+.product__subscription-price {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  flex-shrink: 0;
+}
+
+.product__subscription-price-current {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  letter-spacing: 0.05625rem;
+  color: var(--color-text);
+  vertical-align: bottom;
+}
+
+.product__subscription-price-original {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-light);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  letter-spacing: 0.05625rem;
+  color: #b8b8b8;
+  text-decoration: line-through;
+}
+
 /* ============================================
    SUBSCRIPTION COMPONENT
    ============================================ */
